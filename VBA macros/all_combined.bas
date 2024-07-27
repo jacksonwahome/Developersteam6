@@ -14,15 +14,233 @@ ElseIf Range("a1").Value = "Bulk Plan ID" Then
     MpesaValidationCleanup
 ElseIf Range("H5").Value = "Customer" And Range("a5").Value = "NO" Then
     MpesaValidation
-ElseIf Range("a1").Value = "Refunds" And Range("m5").Value = "From Mobile" Then
-    refundsCleanup
+'ElseIf Range("a1").Value = "Refunds" And Range("m5").Value = "From Mobile" Then
+    'refundsCleanup
 ElseIf Range("A6").Value = 1 And Range("C5").Value = "Group Name" Then
     RefundsValidation
 ElseIf Range("d5").Value = "Loan Officer" Then
     ReadyToDisburse
+    ElseIf Range("A1").Value = "Reg. Date" And Range("O1").Value = "Consented" And Range("v1") = Empty Then
+LoanAccountCopy
+ElseIf Range("J1").Value = "Total Loans" Then
+GroupSheetCopy
+ElseIf Range("A1").Value = "Reg. Date" And Range("O1").Value = "Consented" And Range("v1") <> Empty And Range("v2") = Empty Then
+LoansToReview
+ElseIf Range("A1").Value = "Branch" And Range("E1").Value = "Unique value" Then
+RiskAutomations.GroupAutomation
+ElseIf Range("A1").Value = "Type" And Range("F1").Value = "Status" Then
+RiskAutomations.UIpathGraduation
+
 Else: MsgBox "oops! unable run macros on this Sheet", vbCritical
 
 End If
+End Sub
+
+Sub LoanAccountCopy()
+Dim filePath As String
+Dim wb As Workbook
+Dim workb As Workbook
+Set workb = ActiveWorkbook
+
+Range("V1").Value = "GroupAge"
+Cells.Copy
+
+    filePath = "C:\Users\Jack\Downloads\GroupSummary.xlsx"
+    
+    On Error Resume Next
+    Set wb = Workbooks(Dir(filePath))
+    On Error GoTo 0
+    
+    If wb Is Nothing Then
+        Set wb = Workbooks.Open(filePath)
+        Else: Workbooks("GroupSummary").Worksheets("LoansToReview").Activate
+    End If
+    Worksheets("LoansToReview").Cells(1, 1).PasteSpecial Paste:=xlPasteAll
+    'Columns("A:V").Delete
+    Worksheets("OldGroups").Activate
+    ActiveSheet.Columns("A:W").Delete
+    Worksheets("NewGroups").Activate
+    ActiveSheet.Columns("A:W").Delete
+workb.Close SaveChanges:=False
+
+End Sub
+
+
+Sub GroupSheetCopy()
+Dim filePath As String
+Dim wb As Workbook
+Dim workb As Workbook
+Set workb = ActiveWorkbook
+Cells.Copy
+    
+    filePath = "C:\Users\Jack\Downloads\GroupSummary.xlsx"
+    
+    On Error Resume Next
+    Set wb = Workbooks(Dir(filePath))
+    On Error GoTo 0
+    
+    If wb Is Nothing Then
+        Set wb = Workbooks.Open(filePath)
+        Else: Workbooks("GroupSummary").Worksheets("Group").Activate
+    End If
+    
+    Worksheets("Group").Cells(1, 1).PasteSpecial Paste:=xlPasteAll
+     Worksheets("OldGroups").Activate
+    ActiveSheet.Columns("A:W").Delete
+    Worksheets("NewGroups").Activate
+    ActiveSheet.Columns("A:W").Delete
+    Worksheets("Group").Range("K1").Value = "Pasted"
+    workb.Close SaveChanges:=False
+End Sub
+
+Sub LoansToReview()
+Dim lastRow As Long
+lastRow = Cells(Rows.Count, "U").End(xlUp).Row
+If Worksheets("Group").Range("K1").Value <> "Pasted" Then
+MsgBox ("Download groups report and run macros on it")
+Else
+Range("V2").Select
+    ActiveCell.Formula2R1C1 = _
+        "=IF(INDEX(Group!C[-12],MATCH(LoansToReview!RC[-18]:R" & lastRow & "C[-18]&LoansToReview!RC[-20]:R" & lastRow & "C[-20],Group!C[-17]&Group!C[-19],0))=0,""NewGroup"",""OldGroup"")"
+    Range("V2").Select
+     Range(Selection, Selection.End(xlDown)).Select
+        Selection.Copy
+        Range("v2").Select
+        Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+        Selection.Columns.AutoFit
+       Application.CutCopyMode = False
+       
+      Dim ws As Worksheet
+    Set ws = ActiveWorkbook.Sheets("LoansToReview")
+
+    ' Clear any existing filters
+    If ws.AutoFilterMode Then
+        ws.AutoFilterMode = False
+    End If
+
+    ' Apply filter to show only rows where column Z is "Pass"
+    ws.Range("A1:V" & ws.Cells(ws.Rows.Count, "A").End(xlUp).Row).AutoFilter Field:=22, Criteria1:="OldGroup"
+    
+    Range("a1").Select
+    Range(Selection, Selection.End(xlDown)).Select
+        Range(Selection, Selection.End(xlToRight)).Select
+        Selection.Copy
+        ActiveWorkbook.Sheets("OldGroups").Range("A1").PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+        Application.CutCopyMode = False
+        
+        
+        If ws.AutoFilterMode Then
+        ws.AutoFilterMode = False
+        End If
+        ws.Range("A1:V" & ws.Cells(ws.Rows.Count, "A").End(xlUp).Row).AutoFilter Field:=22, Criteria1:="NewGroup"
+          Range("a1").Select
+    Range(Selection, Selection.End(xlDown)).Select
+        Range(Selection, Selection.End(xlToRight)).Select
+        Selection.Copy
+        ActiveWorkbook.Sheets("NewGroups").Range("A1").PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+        Application.CutCopyMode = False
+        
+        If ws.AutoFilterMode Then
+        ws.AutoFilterMode = False
+        End If
+        
+        ActiveWorkbook.Sheets("NewGroups").Activate
+        Columns("E:P").Delete
+        Columns("F:J").Delete
+        Columns("C:C").Delete
+        Range("E1").Value = "UniqueName"
+        Range("a2").Select
+    Range(Selection, Selection.End(xlDown)).Select
+     Selection.NumberFormat = "m/d/yyyy"
+     Range("D2").Select
+    Range(Selection, Selection.End(xlDown)).Select
+     Selection.NumberFormat = "m/d/yyyy"
+        Dim lastRow2 As Long
+lastRow2 = Cells(Rows.Count, "D").End(xlUp).Row
+Range("e2").Select
+'ActiveCell.Formula2R1C1 = "=RC[-2]:R[35]C[-2]&RC[-3]:R[35]C[-3]"
+  ActiveCell.Formula2R1C1 = "=RC[-2]:R[" & lastRow2 & "]C[-2]&RC[-3]:R[" & lastRow2 & "]C[-3]"
+   Range("E2").Select
+     Range(Selection, Selection.End(xlDown)).Select
+        Selection.Copy
+        Range("E2").Select
+        Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+        Selection.Columns.AutoFit
+       Application.CutCopyMode = False
+       
+       
+       
+        Dim rng As Range
+    Set rng = Range("A1:E" & Cells(Rows.Count, "A").End(xlUp).Row)
+
+    ' Remove duplicates based on column E
+    rng.RemoveDuplicates Columns:=5, Header:=xlYes
+    Columns("A:E").AutoFit
+    
+    
+    ActiveWorkbook.Sheets("OldGroups").Activate
+    Range("a2").Select
+    Range(Selection, Selection.End(xlDown)).Select
+     Selection.NumberFormat = "m/d/yyyy"
+     Range("Q2").Select
+    Range(Selection, Selection.End(xlDown)).Select
+     Selection.NumberFormat = "m/d/yyyy"
+     SortData
+     Columns("D:D").Insert
+     Columns("J:J").Insert
+     DeleteSheetAndSave
+End If
+End Sub
+
+Sub SortData()
+    Dim ws As Worksheet
+    Set ws = ActiveWorkbook.Sheets("OldGroups") ' Change "Sheet1" to your sheet name
+
+    With ws.Sort
+        .SortFields.Clear
+        .SortFields.Add Key:=ws.Range("Q:Q"), Order:=xlAscending, DataOption:=xlSortNormal
+        .SortFields.Add Key:=ws.Range("D:D"), Order:=xlAscending, DataOption:=xlSortNormal
+        .SetRange ws.Range("A:V")
+        .Header = xlYes ' Change to xlNo if your data does not have headers
+        .MatchCase = False
+        .Orientation = xlTopToBottom
+        .SortMethod = xlPinYin
+        .Apply
+    End With
+End Sub
+Sub DeleteSheetAndSave()
+    Dim ws As Worksheet
+    Dim fileName As String
+    Dim currentDate As String
+    
+    ' Delete the sheet named "Group"
+    On Error Resume Next
+    Set ws = ActiveWorkbook.Sheets("Group")
+    If Not ws Is Nothing Then
+        Application.DisplayAlerts = False
+        ws.Delete
+        Application.DisplayAlerts = True
+    End If
+    On Error GoTo 0
+    
+    ' Format the current date and time
+    currentDate = Format(Now, "yyyy-mm-dd_hh-mm-ss")
+
+    
+    ' Create the file name
+    fileName = "PendingRisk_" & currentDate & ".xlsx"
+    
+    ' Save the workbook
+    ActiveWorkbook.SaveAs fileName:=ActiveWorkbook.Path & "\" & fileName, FileFormat:=xlOpenXMLWorkbook
+    
+    ActiveWorkbook.Sheets("OldGroups").Activate
+    Range("A1:X").Select
+    Range(Selection, Selection.End(xlDown)).Select
+    Selection.Copy
 End Sub
 
 Sub Mpesa()
@@ -213,10 +431,13 @@ Loop
         Worksheets("Disbursals").Select
         ActiveSheet.Paste
         Range("a1").Select
+'add a validation sheet called saf
+        Sheets.Add(After:=Sheets(Sheets.Count)).Name = "SAF"
+        
 
 'copy the worksheets for validation purposes
 On Error Resume Next
-Sheets(ActiveSheet.index + 1).Activate
+Sheets("validation").Activate
     If Err.Number <> 0 Then Sheets(1).Activate
         Range("a1").Select
         Application.CutCopyMode = False
@@ -227,7 +448,42 @@ Sheets(ActiveSheet.index + 1).Activate
     Range(Selection, Selection.End(xlDown)).Select
     Selection.Copy
     End If
-
+    
+    Worksheets("SAF").Range("b2").PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+        Application.CutCopyMode = False
+    
+    Sheets("SAF").Activate
+    Range("A2").Select
+    Do While ActiveCell.Offset(0, 1) <> Empty
+    ActiveCell.Value = "MSISDN"
+    ActiveCell.Offset(0, 4).Value = 0
+    ActiveCell.Offset(1, 0).Select
+    Loop
+    
+    Sheets("SAF").Range("A2:E2").Select
+    Range(Selection, Selection.End(xlDown)).Select
+    Selection.Copy
+    
+    Sheets("validation").Activate
+    
+        Dim wb As Workbook
+    Dim filePath As String
+    filePath = "C:\Users\Jack\OneDrive - foxyevents\templates\jack mpesa validation.xlsm"
+    
+    
+    On Error Resume Next
+    Set wb = Workbooks(Dir(filePath))
+    On Error GoTo 0
+    
+    If wb Is Nothing Then
+        Set wb = Workbooks.Open(filePath)
+    End If
+    wb.Activate
+    Sheets("Records").Select
+    
+Range("B3").Select
+       
 End Sub
 
 'Eft module
@@ -371,7 +627,9 @@ Do Until ActiveCell.Offset(0, -5).Value = ""
         ActiveCell.Offset(1, 0).Range("A1").Select
 Loop
         Range("R6").Select
+        If Range("r7").Value <> Empty Then
         Range(Selection, Selection.End(xlDown)).Select
+        End If
         Selection.Copy
         Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
         :=False, Transpose:=False
@@ -435,6 +693,7 @@ End Sub
 Sub MpesaValidation()
 
 'validation/check names module
+        
         Worksheets("Disbursals").Select
         Columns("I:I").Select
 On Error Resume Next
@@ -689,7 +948,9 @@ Do Until ActiveCell.Offset(0, -1) = ""
     ActiveCell.Offset(1, 0).Select
 Loop
 Range("O6").Select
+If Range("o7") <> Empty Then
 Range(Selection, Selection.End(xlDown)).Select
+End If
 Selection.Copy
 Range("J6").Select
 Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
@@ -710,12 +971,16 @@ Range(Selection, Selection.End(xlToRight)).Select
     End With
 Dim rng As Range
     Range("e6").Select
+    If Range("e7").Value <> Empty Then
     Range(Selection, Selection.End(xlDown)).Select
+    End If
 Set rng = Selection 'Change range as required
 If rng.Count = WorksheetFunction.CountIf(rng, "MPESA Account Safaricom") Then
     Columns("f:f").Delete
     Range("I6").Select
+    If Range("i7").Value <> Empty Then
     Range(Selection, Selection.End(xlDown)).Select
+    End If
     Selection.Copy
 ElseIf rng.Count = WorksheetFunction.CountIf(rng, "KCB Kapsowar") Then
     Range("a1").Select
@@ -858,7 +1123,7 @@ ActiveSheet.Name = "ReadyToDisburse"
     Range(Selection, Selection.End(xlToRight)).Select
     Selection.AutoFilter
        ActiveSheet.Range("$A$5:$O$2000").AutoFilter Field:=3, Criteria1:=Array( _
-        "Homa Bay", "Kenyenya", "Kerugoya", "Meru", "Migori", "Nyamira", "Thika", "Chuka", "Embu", "Maua", "Oyugis", "Nyeri", "Rongo", "CBD"), Operator:=xlFilterValues
+        "Homa Bay", "Kenyenya", "Kerugoya", "Meru", "Migori", "Nyamira", "Thika", "Chuka", "Embu", "Maua", "Oyugis", "Nyeri", "Rongo", "CBD", "Eldoret East", "Eldoret West", "Kapsowar", "Nandi Hills", "Kapsabet", "Matuu", "Machakos", "Wote", "Rongai", "Kitui", "Kitengela ", "Kibwezi", "Mwingi"), Operator:=xlFilterValues
 
         Columns("a:b").ColumnWidth = 15
         

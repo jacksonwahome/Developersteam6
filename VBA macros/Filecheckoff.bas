@@ -84,10 +84,12 @@ Sub ApplyValidationList()
         "Maxxton Enterprises Limited," & _
         "Platinum Credit Limited," & _
         "pomelo credit services Limited," & _
-        "Premier Credit Limited," & _
+        "Premier Kenya Limited," & _
         "Progressive Credit Limited," & _
         "Select management services limited," & _
         "Shirika Deposit Taking Sacco," & _
+        "Mwito DT Sacco LTD," & _
+        "Mwananchi Credit LTD," & "Rafiki Microfinance Bank LTD," & "Kcb Bank Kenya LTD," & "Kenya National Police Dt Sacco," & "Higher Education Loans Board," & "Jafari Credit Limited," & "Family Bank Limited," & "Shirika Deposit Taking Sacco Limited," & "Unifi Credit Limited," & "Micromart Africa Limited," & "Kifedha Limited," & "Hazina Sacco Society LTD," & "Jamii Sacco Society Limited," & "Arthi Sacco Society LTD," & "Trans National Times Sacco Society Limited," & "Magereza Sacco Society LTD," & "Absa Bank Kenya Plc," & _
         "Trustgro Sca Limited"
 
     ' Split the string into an array based on the comma and sort it alphabetically
@@ -332,7 +334,7 @@ Sub AmountInWords()
     
     Dim wb As Workbook
     Dim filePath As String
-    filePath = "C:\Users\User1\Downloads\testing.xlsx"
+    filePath = "C:\Users\Jack\OneDrive - foxyevents\templates\ChequesTemplate.xlsx"
     
     On Error Resume Next
     Set wb = Workbooks(Dir(filePath))
@@ -467,9 +469,9 @@ Set ThisRange = Range(Cells(2, 4), Cells(Rows.Count, 4).End(xlUp))
 Do While ActiveCell.Offset(0, -1) <> Empty
 If WorksheetFunction.CountIf(ThisRange, ActiveCell.Value) = 1 Then
 
-Sheets("Template").Range("a16").Value = "Kindly issue us a banker’s cheque of Ksh:" & " " & Range("g2").Offset(0, 2).Value _
-& " " & "(" & Range("g2").Offset(0, 5).Value & ")" & " " & "in favor of" & " " & Range("g2").Offset(0, 1).Value & "." & " " & _
-"Being loan buyoff for" & " " & Range("g2").Offset(0, -6).Value & " " & "of ID:" & " " & Range("g2").Offset(0, -2).Value
+Sheets("Template").Range("a16").Value = "Kindly issue us a banker’s cheque of Ksh:" & " " & ActiveCell.Offset(0, 5).Value _
+& " " & "(" & ActiveCell.Offset(0, 8).Value & ")" & " " & "in favor of" & " " & ActiveCell.Offset(0, 4).Value & "." & " " & _
+"Being loan buyoff for" & " " & ActiveCell.Offset(0, -3).Value & " " & "of ID:" & " " & ActiveCell.Offset(0, 1).Value
 
 ActiveCell.Offset(1, 0).Select
 
@@ -528,6 +530,9 @@ Loop
     wordApp.Selection.Find.text = "]"
     wordApp.Selection.Find.Execute Replace:=2, Forward:=True, Wrap:=wdFindContinue
     
+     ActiveWorkbook.Close SaveChanges:=False
+    wordDoc.SaveAs2 fileName:="C:\Users\Jack\OneDrive - foxyevents\templates\Bankers\BankersCheques_" & Format(Now, "ddmmmyyyy_hhmmss") & ".docx"
+    
 ' Delete the last page break if present
 With wordDoc.Range.Find 'use the Find method on the document range
     .text = "^m" 'search for the page break character
@@ -535,25 +540,25 @@ With wordDoc.Range.Find 'use the Find method on the document range
     .Forward = False 'search backwards from the end of the document
     .Wrap = wdFindStop 'stop after one search
     .Execute Replace:=wdReplaceOne 'replace only one occurrence
-  End With
-  
+End With
+
 With wordDoc.Content 'Get the content of the document
     .Collapse Direction:=wdCollapseEnd 'Move the range to the end of the document
-    .MoveStart Unit:=wdCharacter, Count:=-1 'Move the start of the range back by one character
+    .MoveEnd Unit:=wdCharacter, Count:=-1 'Move the end of the range back by one character
     If .text = vbCr Then 'Check if the range contains a paragraph mark
-      .Delete 'Delete the range
+        .Delete 'Delete the range
     End If
-  End With
+End With
 
-
-   ActiveWorkbook.Close SaveChanges:=False
+  
 
         ' Activate the Word window
     wordApp.Activate
     'Selection.Collapse Direction:=wdCollapseEnd 'Move the selection to the end of the current selection
 
 
-    wordDoc.SaveAs2 fileName:="C:\Users\User1\Desktop\Bankers\BankersCheques_" & Format(Now, "ddmmyyyy_hhmmss") & ".docx" 'Save the document with a new name that includes the current date and time
+    'wordDoc.SaveAs2 fileName:="C:\Users\User1\Desktop\Bankers\BankersCheques_" & Format(Now, "ddmmyyyy_hhmmss") & ".docx" 'Save the document with a new name that includes the current date and time
+    
     Set wordDoc = Nothing
     Set wordApp = Nothing
 End Sub
@@ -646,7 +651,7 @@ Sub CheckColumnKBasedOnColumnG()
         MsgBox "type in the number cheques for each loan account!", vbExclamation, "Empty Cell Warning"
     Else
     Range("K2:K" & lastRowG).Interior.Color = vbYellow
-        practice.MultipleReports
+        MultipleReports
     End If
 End Sub
 
@@ -718,6 +723,61 @@ Sub ApplyDataValidationWithCustomMessage()
         .ErrorTitle = "Validation Error"
         .ErrorMessage = "You can only have a maximum of 4 cheques per loan account."
     End With
+End Sub
+ Sub MultipleReports()
+Dim lastRowG As Long
+lastRowG = Cells(Rows.Count, "G").End(xlUp).Row
+    If isEmptyRange And Range("k2").Interior.Color <> vbYellow Then
+        MsgBox "type in the number cheques for each loan account!", vbExclamation, "Empty Cell Warning"
+    Else
+    Range("K2:K" & lastRowG).Interior.Color = vbYellow
+    Filecheckoff.CopyRows
+    End If
+If Range("K2").Interior.Color = vbYellow Then
+CheckPayeeAndAmount
+
+End If
+End Sub
+
+Sub CheckPayeeAndAmount()
+
+    Dim lastRow As Long
+    Dim lastCol As Long
+    Dim dataRng As Range
+    Dim cell As Range
+    Dim emptyCells As Boolean ' Flag to track empty cells
+
+    ' Find the last row and last column in column G with data on the active sheet
+    lastRow = ActiveSheet.Cells(ActiveSheet.Rows.Count, "G").End(xlUp).Row
+    lastCol = 9
+
+    ' Define the range starting from H2
+    Set dataRng = ActiveSheet.Range("H2", ActiveSheet.Cells(lastRow, lastCol))
+
+    ' Add borders to the data range
+    dataRng.BorderAround ColorIndex:=1, Weight:=xlThin
+    dataRng.Borders.LineStyle = xlContinuous
+
+    ' Initialize the emptyCells flag to False
+    emptyCells = False
+
+    ' Loop through each cell in the range and check for blanks
+    For Each cell In dataRng
+    If cell.Value <> Empty Then
+    cell.Interior.Color = vbWhite
+        Else
+            cell.Interior.Color = RGB(255, 0, 0) ' Red color
+            emptyCells = True ' Set the flag to True if any cell is empty
+        End If
+    Next cell
+
+    ' Display message if there are empty cells
+    If emptyCells = True Then
+    MsgBox ("Payee and amount cannot be empty")
+    Else
+    
+DuplicateAndRenameSheet
+    End If
 End Sub
 
 
