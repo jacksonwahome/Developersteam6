@@ -1,0 +1,227 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="824,1296.8" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="48">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Activities.System.Binding</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Presentations</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Reflection</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="76">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <ueab:SequenceX DisplayName="Single Excel Process Scope" sap:VirtualizedContainerService.HintSize="569.6,1232" sap2010:WorkflowViewState.IdRef="SequenceX_1">
+    <ueab:SequenceX.Variables>
+      <Variable x:TypeArguments="ue:IWorkbookQuickHandle" Default="[new WorkbookQuickHandle(workbookPath:=&quot;Project_Notebook.xlsx&quot;,visible:=True,autoSave:=False,createNew:=True,readOnly:=False,isWorkspace:=True)]" Name="Notes" />
+      <Variable x:TypeArguments="sd:DataTable" Name="LoanToDisburse" />
+    </ueab:SequenceX.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="526.4,1165.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="Excel\Automatic disbursals.xlsx">
+      <ueab:ExcelApplicationCard.Body>
+        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="492.8,872.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="449.6,201.6" sap2010:WorkflowViewState.IdRef="ReadRangeX_1" Range="[Excel.Sheet(&quot;Sheet1&quot;)]" SaveTo="[LoanToDisburse]" />
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Disbursal" sap:VirtualizedContainerService.HintSize="449.6,604.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="8a3bb3ef-6b36-4ac5-8c8a-87c6eba5250b" Version="V2">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,364.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NNavigateBrowser Action="Refresh" DisplayName="Navigate Browser - Refresh" sap:VirtualizedContainerService.HintSize="372.8,114.4" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V3" />
+                    <uix:NSelectItem DisplayName="Select Item 'Branch'" sap:VirtualizedContainerService.HintSize="372.8,182.4" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;C4&quot;)]" ScopeIdentifier="8a3bb3ef-6b36-4ac5-8c8a-87c6eba5250b" Version="V3">
+                      <uix:NSelectItem.Items>
+                        <scg:List x:TypeArguments="x:String" Capacity="50">
+                          <x:String>Bomet</x:String>
+                          <x:String>Bondo</x:String>
+                          <x:String>Bungoma East</x:String>
+                          <x:String>Bungoma West</x:String>
+                          <x:String>Busia</x:String>
+                          <x:String>CBD</x:String>
+                          <x:String>Chuka</x:String>
+                          <x:String>Eldama Ravine</x:String>
+                          <x:String>Eldoret CBD</x:String>
+                          <x:String>Eldoret East</x:String>
+                          <x:String>Eldoret West</x:String>
+                          <x:String>Embu</x:String>
+                          <x:String>Engineer</x:String>
+                          <x:String>Head Office</x:String>
+                          <x:String>Homa Bay</x:String>
+                          <x:String>Kakamega</x:String>
+                          <x:String>Kapcherop</x:String>
+                          <x:String>Kapsabet</x:String>
+                          <x:String>Kapsowar</x:String>
+                          <x:String>Kenyenya</x:String>
+                          <x:String>Kericho</x:String>
+                          <x:String>Keroka</x:String>
+                          <x:String>Kerugoya</x:String>
+                          <x:String>Kibwezi</x:String>
+                          <x:String>Kilgoris</x:String>
+                          <x:String>Kimilili</x:String>
+                          <x:String>Kisii</x:String>
+                          <x:String>Kisumu</x:String>
+                          <x:String>Kitale East</x:String>
+                          <x:String>Kitale West</x:String>
+                          <x:String>Kitengela</x:String>
+                          <x:String>Kitui</x:String>
+                          <x:String>Limuru</x:String>
+                          <x:String>Litein</x:String>
+                          <x:String>Machakos</x:String>
+                          <x:String>Makutano</x:String>
+                          <x:String>Matuu</x:String>
+                          <x:String>Maua</x:String>
+                          <x:String>Meru</x:String>
+                          <x:String>Migori</x:String>
+                          <x:String>Mogogosiek</x:String>
+                          <x:String>Molo</x:String>
+                          <x:String>Mwingi</x:String>
+                          <x:String>Nakuru</x:String>
+                          <x:String>Nandi Hills</x:String>
+                          <x:String>Nyahururu</x:String>
+                          <x:String>Nyamira</x:String>
+                          <x:String>Nyeri</x:String>
+                          <x:String>Oyugis</x:String>
+                          <x:String>Rongai</x:String>
+                        </scg:List>
+                      </uix:NSelectItem.Items>
+                      <uix:NSelectItem.Target>
+                        <uix:TargetAnchorable BrowserURL="https://jk.mfiexpert.com/loans/disbursalsne.aspx" CVScreenId="87a949e3-f142-4794-b62b-c09ca558c615" CvElementArea="1344, 352, 251, 30" CvType="InputBox" DesignTimeRectangle="1345, 352, 250, 29" DesignTimeScaleFactor="1.25" ElementType="TableRow" Guid="b5a73d49-544b-4a9a-bed6-bc641cf4caa9" InformativeScreenshot="e6419d32e7e91f219faf25333abae103.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Disbursal' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target CVScreenId="87a949e3-f142-4794-b62b-c09ca558c615" CvTextArea="1280, 358, 58, 16" CvTextArgument="Branch :" CvType="Text" DesignTimeRectangle="1280, 358, 59, 16" ElementType="Text" Guid="2fa8319a-306f-4fea-bccb-fb5df37dacdc" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NSelectItem.Target>
+                    </uix:NSelectItem>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAK3SURBVDhPRVNLSJRRFJ51lKOTFWTvoIW6yHmYSgRC5RARBL2QgtnUppRICAlCMmqjCQbz+Gd0Sv/mVY4zzvz/jNEiChINsuipY7oI0hbSA0ow069zzj9Ti8u5957vfOfcc79jsnqnYKfl8Py3Vb6c7OXsnSFrnGs8vJ+QvU0xsCYBu3MURAGeaQNMtso7SYAcrORnoIP8jHX4Poq/hvyMNbHTRpdcCQfYPOzgAAJKZoOAM1u904J1EIHNTZb2Jga09XfhSfwwRhNOjMUP4WHsGLrDV3EiMCwgGxE3+MfRdFdF5712BKIt6I1cgisYZ4IpXFe78CdrAfQiWiVYHrZgRS/GzNBunOx5hL5YM+ZTO7GUXQ1kzLRKZF3u8/MTcmgMprGSNS6RXSOghfQm3FA78DZRlw/gQEqiMWYtljLFOBXIGBU4/c/xQ9tCDgu+pTdjXtuORNSF7IPjRGw2yImY7ZK+Tsh+6htxNPDU6MFe5TVmUxUC/pXeioHIWbT092BRX5/PXIIFvQypWCPmhsqFiBM6lREYOvC9x6vEPno/ZzNjLrULntCVf8HftR1o6+vGi8H9RjXUp6/6NjQoo0YF3AclXAiwYCJZDTV2XoJ/ZzagVb0tvwStGCuZUmpwET4ka1FNyUUHLJIDyjN8SVUKSS5thxptpkwW3AlfxEDsnJBxZtAPLWdXoVO9KfowWX2GNJnkTDCJz8lKLGpl6I804ZNWgVuha/Is/tZChWNUTa3yRkQmv8B6Z3XZ3ZM46B+FJ9qKjlA7giSW2VS5BDLBol6Kwfsu1PvGJfseerqJM7PemYgHpKD9Ot87XAiG8DJej8cDR+Cnpp7uTcuMyEwQhrHSxGqugImIhFllAqkiBrD+edh4BviOGy6zQGfGixJZ71V5W5jIQlU8RNxtqTAfxDGMsXun8Bfd87FvOdGtewAAAABJRU5ErkJggg==" InformativeScreenshot="4e41c89972c395fdae795dc693c2404c.jpg" Selector="&lt;html app='chrome.exe' title='Disbursal' /&gt;" Title="Disbursal" Url="https://jk.mfiexpert.com/loans/disbursalsne.aspx" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelApplicationCard.Body>
+    </ueab:ExcelApplicationCard>
+  </ueab:SequenceX>
+</Activity>

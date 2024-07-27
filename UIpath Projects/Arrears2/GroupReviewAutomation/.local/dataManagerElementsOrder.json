@@ -1,0 +1,52 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Arrears&Sequence_5",
+        "Link&SequenceX_1",
+        "Links&SequenceX_1",
+        "Linktena&SequenceX_1",
+        "UrlLinks&SequenceX_1",
+        "Group1&SequenceX_1",
+        "GrpArrears&SequenceX_1",
+        "ActiveMembers&SequenceX_1",
+        "wordcount&SequenceX_1",
+        "webpageText&SequenceX_1",
+        "StatusData&Sequence_6",
+        "StatusDataText&Sequence_6",
+        "ActiveMembers&Sequence_6",
+        "LoanAccount&Sequence_10",
+        "ConsentData&Sequence_10",
+        "ConsentDataText&Sequence_10",
+        "ResultConsetData&Sequence_10"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Arreas Global Handler.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "answer&Sequence_1",
+        "retry&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "errorInfo",
+        "result"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

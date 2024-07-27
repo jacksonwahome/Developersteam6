@@ -1,0 +1,957 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="GraduationTrial2" sap:VirtualizedContainerService.HintSize="873.3333333333334,958" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="721.3333333333334,893.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_8">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap:VirtualizedContainerService.HintSize="659.3333333333334,805.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="597.3333333333334,694.6666666666666" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+        <ueab:ExcelProcessScopeX.Body>
+          <ActivityAction x:TypeArguments="ui:IExcelProcess">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="563.3333333333334,584.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="501.3333333333333,496.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="C:\Users\LENOVO\OneDrive\Desktop\Jackson AutomationsMacroSharedLenovo.xlsm">
+                <ueab:ExcelApplicationCard.Body>
+                  <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="467.3333333333333,193.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:ExcelForEachRowX DisplayName="For Each (previous loan amt and status)" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="405.3333333333333,57.333333333333336" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_4" Range="[Excel.Sheet(&quot;Loans&quot;)]" SaveAfterEachRow="False">
+                        <ueab:ExcelForEachRowX.Body>
+                          <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                            <ActivityAction.Argument1>
+                              <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+                            </ActivityAction.Argument1>
+                            <ActivityAction.Argument2>
+                              <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                            </ActivityAction.Argument2>
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,25.333333333333332" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Search" sap:VirtualizedContainerService.HintSize="450,1014" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="3969d4ea-7302-45cc-8447-b99229c282af" Version="V2">
+                                <uix:NApplicationCard.Body>
+                                  <ActivityAction x:TypeArguments="x:Object">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,772" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                      <Sequence.Variables>
+                                        <Variable x:TypeArguments="x:String" Name="Customer" />
+                                        <Variable x:TypeArguments="x:String" Name="LoanCount" />
+                                        <Variable x:TypeArguments="sd:DataTable" Name="AllCustomerLoanAccounts" />
+                                      </Sequence.Variables>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="MaximizeWindow_2" />
+                                      <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="[CurrentRow.ByField(&quot;ID links&quot;)]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NGoToUrl>
+                                      <Assign sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[Customer]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String">[CurrentRow.ByField("Name")]</InArgument>
+                                        </Assign.Value>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </Assign>
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'FLORENCE NTHAMBI WAMBUA'" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3969d4ea-7302-45cc-8447-b99229c282af" Version="V3">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://jk.mfiexpert.app/search/search.aspx?search=36448714" CVScreenId="7eb7ffae-4b80-438c-b955-54c30ee07bb0" CvTextArea="283, 305, 166, 11" CvTextArgument="[Customer]" CvType="Text" DesignTimeRectangle="284, 303, 164, 15" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl class='dt' tableRow='3' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl class='dt' tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='' aaname='FLORENCE  NTHAMBI WAMBUA' check:innerText='FLORENCE NTHAMBI WAMBUA' /&gt;" Guid="dda1712c-fc1a-4680-99b2-d970b07cfcf0" InformativeScreenshot="4dbd7041bf77409b95707b9fb82ec28c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Search' /&gt;" SearchSteps="CV" Version="V4" Visibility="Interactive">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                <uix:Target CVScreenId="7eb7ffae-4b80-438c-b955-54c30ee07bb0" CvTextArea="283, 275, 36, 12" CvTextArgument="NAME" CvType="Text" DesignTimeRectangle="278, 267, 293, 30" ElementType="Text" FullSelectorArgument="&lt;webctrl class='dt' tableRow='3' tag='TABLE' /&gt;&lt;webctrl aaname='NAME' tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl class='dt' tag='TABLE' /&gt;&lt;webctrl aaname='NAME' type='' tag='TH' class='' check:innerText='NAME' /&gt;" Guid="1083da49-8e8d-4c43-8380-c4d372de9747" SearchSteps="FuzzySelector, CV" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NClick.Target>
+                                        <uix:NClick.VerifyOptions>
+                                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                            <uix:VerifyExecutionOptions.Retry>
+                                              <InArgument x:TypeArguments="x:Boolean" />
+                                            </uix:VerifyExecutionOptions.Retry>
+                                            <uix:VerifyExecutionOptions.Timeout>
+                                              <InArgument x:TypeArguments="x:Double" />
+                                            </uix:VerifyExecutionOptions.Timeout>
+                                          </uix:VerifyExecutionOptions>
+                                        </uix:NClick.VerifyOptions>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NClick>
+                                      <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="Delay_1">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </Delay>
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Loans'" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3969d4ea-7302-45cc-8447-b99229c282af" Version="V3">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://jk.mfiexpert.app/setup/customers/customersne.aspx?id=2123993" CVScreenId="da0a1ed6-4584-4cb0-8799-1cc53bbce03c" CvElementArea="411, 185, 67, 42" CvTextArea="428, 200, 34, 12" CvTextArgument="Loans" CvType="Button" DesignTimeRectangle="413, 186, 65, 40" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl parentid='pC' tableRow='1' tag='TABLE' /&gt;&lt;webctrl class='rtsLink' idx='5' tableRow='2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='pC' tag='TABLE' /&gt;&lt;webctrl class='rtsLink' aaname='' type='' tag='SPAN' check:innerText='Loans' /&gt;" Guid="d25c2c84-3343-487d-9ce2-8c1e6e59adbb" InformativeScreenshot="9d4df289f368852639ba102582316fcf.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Customer Setup' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                                        </uix:NClick.Target>
+                                        <uix:NClick.VerifyOptions>
+                                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                            <uix:VerifyExecutionOptions.Retry>
+                                              <InArgument x:TypeArguments="x:Boolean" />
+                                            </uix:VerifyExecutionOptions.Retry>
+                                            <uix:VerifyExecutionOptions.Timeout>
+                                              <InArgument x:TypeArguments="x:Double" />
+                                            </uix:VerifyExecutionOptions.Timeout>
+                                          </uix:VerifyExecutionOptions>
+                                        </uix:NClick.VerifyOptions>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NClick>
+                                      <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="Delay_2">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </Delay>
+                                      <uix:NCheckState DisplayName="Check App State 'Page size'" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="3969d4ea-7302-45cc-8447-b99229c282af" Version="V3">
+                                        <uix:NCheckState.IfExists>
+                                          <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,25.333333333333332" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <uix:NSelectItem DisplayName="Select Item 'select'" sap:VirtualizedContainerService.HintSize="388,191.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="All" ScopeIdentifier="3969d4ea-7302-45cc-8447-b99229c282af" Version="V3">
+                                              <uix:NSelectItem.Items>
+                                                <scg:List x:TypeArguments="x:String" Capacity="4">
+                                                  <x:String>10</x:String>
+                                                  <x:String>20</x:String>
+                                                  <x:String>50</x:String>
+                                                  <x:String>All</x:String>
+                                                </scg:List>
+                                              </uix:NSelectItem.Items>
+                                              <uix:NSelectItem.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://jk.mfiexpert.app/setup/customers/customersne.aspx?id=1245639" CVScreenId="27702b18-a829-44c3-b314-87e52d00d0f6" CvElementArea="357, 632, 58, 31" CvType="InputBox" DesignTimeRectangle="387, 634, 26, 26" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Type Code Description Disb. On Loan Amount No. of Inst. Balance On-time % Status' tableRow='2' tag='TABLE' /&gt;&lt;webctrl class='rcbActionButton' tableRow='3' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Type Code Description Disb. On Loan Amount No. of Inst. Balance On-time % Status' tag='TABLE' /&gt;&lt;webctrl class='rcbActionButton' type='button' tag='BUTTON' aaname='select' check:text='select' /&gt;" Guid="1aaefcb1-a268-4ec1-9c23-7be58c0d3959" InformativeScreenshot="ebd1b3d512614e44e65cfe09ce8d8c86.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Customer Setup' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="27702b18-a829-44c3-b314-87e52d00d0f6" CvTextArea="301, 640, 56, 15" CvTextArgument="Page size:" CvType="Text" DesignTimeRectangle="302, 638, 55, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Type Code Description Disb. On Loan Amount No. of Inst. Balance On-time % Status' tableRow='2' tag='TABLE' /&gt;&lt;webctrl class='rgPagerLabel' tableRow='3' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Type Code Description Disb. On Loan Amount No. of Inst. Balance On-time % Status' tag='TABLE' /&gt;&lt;webctrl class='rgPagerLabel' type='' tag='SPAN' aaname='Page size:' check:innerText='Page size:' /&gt;" Guid="85c1cf4d-bcf3-4e99-8fda-f1f0be62bd35" SearchSteps="FuzzySelector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NSelectItem.Target>
+                                            </uix:NSelectItem>
+                                            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="388,117.33333333333333" sap2010:WorkflowViewState.IdRef="Delay_3" />
+                                          </Sequence>
+                                        </uix:NCheckState.IfExists>
+                                        <uix:NCheckState.IfNotExists>
+                                          <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,25.333333333333332" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </Sequence>
+                                        </uix:NCheckState.IfNotExists>
+                                        <uix:NCheckState.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://jk.mfiexpert.app/setup/customers/customersne.aspx?id=1245639" CVScreenId="27702b18-a829-44c3-b314-87e52d00d0f6" CvTextArea="301, 640, 56, 15" CvTextArgument="Page size:" CvType="Text" DesignTimeRectangle="302, 638, 55, 18" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Type Code Description Disb. On Loan Amount No. of Inst. Balance On-time % Status' tableRow='2' tag='TABLE' /&gt;&lt;webctrl class='rgPagerLabel' tableRow='3' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Type Code Description Disb. On Loan Amount No. of Inst. Balance On-time % Status' tag='TABLE' /&gt;&lt;webctrl class='rgPagerLabel' type='' tag='SPAN' aaname='Page size:' check:innerText='Page size:' /&gt;" Guid="b3583022-6679-43c4-9b1d-debb2c2966bd" InformativeScreenshot="db335063c4404bd5c58a5107ba076f37.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Customer Setup' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                <uix:Target CVScreenId="27702b18-a829-44c3-b314-87e52d00d0f6" CvElementArea="261, 631, 31, 31" CvTextArea="269, 640, 12, 12" CvTextArgument="&gt;" CvType="Button" DesignTimeRectangle="263, 633, 27, 28" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Type Code Description Disb. On Loan Amount No. of Inst. Balance On-time % Status' tableRow='2' tag='TABLE' /&gt;&lt;webctrl name='ctl00$ContentPlaceHolder1$RGLoans$ctl00$ctl03$ctl01$ctl12' tableRow='3' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Type Code Description Disb. On Loan Amount No. of Inst. Balance On-time % Status' tag='TABLE' /&gt;&lt;webctrl name='ctl00$ContentPlaceHolder1$RGLoans$ctl00$ctl03$ctl01$ctl12' type='button' tag='BUTTON' class='t-button rgActionButton rgPageLast' aaname='Last Page' /&gt;" Guid="b5f52f1b-dd89-4ef0-9358-1171242a3aaa" SearchSteps="FuzzySelector, CV" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NCheckState.Target>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NCheckState>
+                                      <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[AllCustomerLoanAccounts]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Type' ReferenceIdx='0' Name='Type'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Type Url' ReferenceIdx='1' Name='Type Url' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Code' ReferenceIdx='2' Name='Code'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Code Url' ReferenceIdx='3' Name='Code Url' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Description' ReferenceIdx='4' Name='Description'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Description Url' ReferenceIdx='5' Name='Description Url' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Disb. On' ReferenceIdx='6' Name='Disb. On'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Disb. On Url' ReferenceIdx='7' Name='Disb. On Url' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Loan Amount' ReferenceIdx='8' Name='Loan Amount'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Loan Amount Url' ReferenceIdx='9' Name='Loan Amount Url' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='No. of Inst.' ReferenceIdx='10' Name='No. of Inst.' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='No. of Inst. Url' ReferenceIdx='11' Name='No. of Inst. Url' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Balance' ReferenceIdx='12' Name='Balance' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Balance Url' ReferenceIdx='13' Name='Balance Url' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='On-time %' ReferenceIdx='14' Name='On-time %' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='On-time % Url' ReferenceIdx='15' Name='On-time % Url' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Status' ReferenceIdx='16' Name='Status'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Status Url' ReferenceIdx='17' Name='Status Url' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Type' attr='fulltext' name2='Type Url' attr2='href' /&gt;&lt;column name='Code' attr='fulltext' name2='Code Url' attr2='href' /&gt;&lt;column name='Description' attr='fulltext' name2='Description Url' attr2='href' /&gt;&lt;column name='Disb. On' attr='fulltext' name2='Disb. On Url' attr2='href' /&gt;&lt;column name='Loan Amount' attr='fulltext' name2='Loan Amount Url' attr2='href' /&gt;&lt;column name='No. of Inst.' attr='fulltext' name2='No. of Inst. Url' attr2='href' /&gt;&lt;column name='Balance' attr='fulltext' name2='Balance Url' attr2='href' /&gt;&lt;column name='On-time %' attr='fulltext' name2='On-time % Url' attr2='href' /&gt;&lt;column name='Status' attr='fulltext' name2='Status Url' attr2='href' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="3969d4ea-7302-45cc-8447-b99229c282af" Version="V3">
+                                        <uix:NExtractData.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://jk.mfiexpert.app/setup/customers/customersne.aspx?id=1245639" DesignTimeRectangle="57, 229, 1234, 1786" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl aaname='Type Code Description Disb. On Loan Amount No. of Inst. Balance On-time % Status' tableRow='2' tag='TABLE' /&gt;" Guid="c2935ade-19c4-490a-b49b-9a1194757eaa" InformativeScreenshot="896cf3517efe4552a7a9a9291df368bb.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Customer Setup' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                        </uix:NExtractData.Target>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NExtractData>
+                                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <TryCatch.Try>
+                                          <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;Graduation&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="203.33333333333334,25.333333333333332" sap2010:WorkflowViewState.IdRef="WriteRangeX_1" IgnoreEmptySource="False" Source="[AllCustomerLoanAccounts]">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </ueab:WriteRangeX>
+                                        </TryCatch.Try>
+                                        <TryCatch.Catches>
+                                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404.6666666666667,23.333333333333332" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ActivityAction x:TypeArguments="s:Exception">
+                                              <ActivityAction.Argument>
+                                                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                              </ActivityAction.Argument>
+                                              <Sequence sap:VirtualizedContainerService.HintSize="416,346.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Loans'" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3969d4ea-7302-45cc-8447-b99229c282af" Version="V3">
+                                                  <uix:NClick.Target>
+                                                    <uix:TargetAnchorable BrowserURL="https://jk.mfiexpert.app/setup/customers/customersne.aspx?id=2123993" CVScreenId="da0a1ed6-4584-4cb0-8799-1cc53bbce03c" CvElementArea="411, 185, 67, 42" CvTextArea="428, 200, 34, 12" CvTextArgument="Loans" CvType="Button" DesignTimeRectangle="413, 186, 65, 40" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl parentid='pC' tableRow='1' tag='TABLE' /&gt;&lt;webctrl class='rtsLink' idx='5' tableRow='2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='pC' tag='TABLE' /&gt;&lt;webctrl class='rtsLink' aaname='' type='' tag='SPAN' check:innerText='Loans' /&gt;" Guid="d25c2c84-3343-487d-9ce2-8c1e6e59adbb" InformativeScreenshot="9d4df289f368852639ba102582316fcf.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Customer Setup' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                                                  </uix:NClick.Target>
+                                                  <uix:NClick.VerifyOptions>
+                                                    <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                      <uix:VerifyExecutionOptions.Retry>
+                                                        <InArgument x:TypeArguments="x:Boolean" />
+                                                      </uix:VerifyExecutionOptions.Retry>
+                                                      <uix:VerifyExecutionOptions.Timeout>
+                                                        <InArgument x:TypeArguments="x:Double" />
+                                                      </uix:VerifyExecutionOptions.Timeout>
+                                                    </uix:VerifyExecutionOptions>
+                                                  </uix:NClick.VerifyOptions>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </uix:NClick>
+                                                <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="Delay_8">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </Delay>
+                                                <uix:NCheckState DisplayName="Check App State 'Page size'" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="3969d4ea-7302-45cc-8447-b99229c282af" Version="V3">
+                                                  <uix:NCheckState.IfExists>
+                                                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,25.333333333333332" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <uix:NSelectItem DisplayName="Select Item 'select'" sap:VirtualizedContainerService.HintSize="388,191.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_3" Item="All" ScopeIdentifier="3969d4ea-7302-45cc-8447-b99229c282af" Version="V3">
+                                                        <uix:NSelectItem.Items>
+                                                          <scg:List x:TypeArguments="x:String" Capacity="4">
+                                                            <x:String>10</x:String>
+                                                            <x:String>20</x:String>
+                                                            <x:String>50</x:String>
+                                                            <x:String>All</x:String>
+                                                          </scg:List>
+                                                        </uix:NSelectItem.Items>
+                                                        <uix:NSelectItem.Target>
+                                                          <uix:TargetAnchorable BrowserURL="https://jk.mfiexpert.app/setup/customers/customersne.aspx?id=1245639" CVScreenId="27702b18-a829-44c3-b314-87e52d00d0f6" CvElementArea="357, 632, 58, 31" CvType="InputBox" DesignTimeRectangle="387, 634, 26, 26" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Type Code Description Disb. On Loan Amount No. of Inst. Balance On-time % Status' tableRow='2' tag='TABLE' /&gt;&lt;webctrl class='rcbActionButton' tableRow='3' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Type Code Description Disb. On Loan Amount No. of Inst. Balance On-time % Status' tag='TABLE' /&gt;&lt;webctrl class='rcbActionButton' type='button' tag='BUTTON' aaname='select' check:text='select' /&gt;" Guid="1aaefcb1-a268-4ec1-9c23-7be58c0d3959" InformativeScreenshot="ebd1b3d512614e44e65cfe09ce8d8c86.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Customer Setup' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                                            <uix:TargetAnchorable.Anchors>
+                                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                <uix:Target CVScreenId="27702b18-a829-44c3-b314-87e52d00d0f6" CvTextArea="301, 640, 56, 15" CvTextArgument="Page size:" CvType="Text" DesignTimeRectangle="302, 638, 55, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Type Code Description Disb. On Loan Amount No. of Inst. Balance On-time % Status' tableRow='2' tag='TABLE' /&gt;&lt;webctrl class='rgPagerLabel' tableRow='3' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Type Code Description Disb. On Loan Amount No. of Inst. Balance On-time % Status' tag='TABLE' /&gt;&lt;webctrl class='rgPagerLabel' type='' tag='SPAN' aaname='Page size:' check:innerText='Page size:' /&gt;" Guid="85c1cf4d-bcf3-4e99-8fda-f1f0be62bd35" SearchSteps="FuzzySelector, CV" />
+                                                              </scg:List>
+                                                            </uix:TargetAnchorable.Anchors>
+                                                          </uix:TargetAnchorable>
+                                                        </uix:NSelectItem.Target>
+                                                      </uix:NSelectItem>
+                                                      <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="388,117.33333333333333" sap2010:WorkflowViewState.IdRef="Delay_9" />
+                                                    </Sequence>
+                                                  </uix:NCheckState.IfExists>
+                                                  <uix:NCheckState.IfNotExists>
+                                                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,25.333333333333332" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="388,117.33333333333333" sap2010:WorkflowViewState.IdRef="Delay_10" />
+                                                    </Sequence>
+                                                  </uix:NCheckState.IfNotExists>
+                                                  <uix:NCheckState.Target>
+                                                    <uix:TargetAnchorable BrowserURL="https://jk.mfiexpert.app/setup/customers/customersne.aspx?id=1245639" CVScreenId="27702b18-a829-44c3-b314-87e52d00d0f6" CvTextArea="301, 640, 56, 15" CvTextArgument="Page size:" CvType="Text" DesignTimeRectangle="302, 638, 55, 18" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Type Code Description Disb. On Loan Amount No. of Inst. Balance On-time % Status' tableRow='2' tag='TABLE' /&gt;&lt;webctrl class='rgPagerLabel' tableRow='3' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Type Code Description Disb. On Loan Amount No. of Inst. Balance On-time % Status' tag='TABLE' /&gt;&lt;webctrl class='rgPagerLabel' type='' tag='SPAN' aaname='Page size:' check:innerText='Page size:' /&gt;" Guid="b3583022-6679-43c4-9b1d-debb2c2966bd" InformativeScreenshot="db335063c4404bd5c58a5107ba076f37.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Customer Setup' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                                      <uix:TargetAnchorable.Anchors>
+                                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                          <uix:Target CVScreenId="27702b18-a829-44c3-b314-87e52d00d0f6" CvElementArea="261, 631, 31, 31" CvTextArea="269, 640, 12, 12" CvTextArgument="&gt;" CvType="Button" DesignTimeRectangle="263, 633, 27, 28" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Type Code Description Disb. On Loan Amount No. of Inst. Balance On-time % Status' tableRow='2' tag='TABLE' /&gt;&lt;webctrl name='ctl00$ContentPlaceHolder1$RGLoans$ctl00$ctl03$ctl01$ctl12' tableRow='3' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Type Code Description Disb. On Loan Amount No. of Inst. Balance On-time % Status' tag='TABLE' /&gt;&lt;webctrl name='ctl00$ContentPlaceHolder1$RGLoans$ctl00$ctl03$ctl01$ctl12' type='button' tag='BUTTON' class='t-button rgActionButton rgPageLast' aaname='Last Page' /&gt;" Guid="b5f52f1b-dd89-4ef0-9358-1171242a3aaa" SearchSteps="FuzzySelector, CV" />
+                                                        </scg:List>
+                                                      </uix:TargetAnchorable.Anchors>
+                                                    </uix:TargetAnchorable>
+                                                  </uix:NCheckState.Target>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </uix:NCheckState>
+                                                <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[AllCustomerLoanAccounts]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Type' ReferenceIdx='0' Name='Type'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Type Url' ReferenceIdx='1' Name='Type Url' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Code' ReferenceIdx='2' Name='Code'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Code Url' ReferenceIdx='3' Name='Code Url' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Description' ReferenceIdx='4' Name='Description'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Description Url' ReferenceIdx='5' Name='Description Url' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Disb. On' ReferenceIdx='6' Name='Disb. On'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Disb. On Url' ReferenceIdx='7' Name='Disb. On Url' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Loan Amount' ReferenceIdx='8' Name='Loan Amount'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Loan Amount Url' ReferenceIdx='9' Name='Loan Amount Url' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='No. of Inst.' ReferenceIdx='10' Name='No. of Inst.' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='No. of Inst. Url' ReferenceIdx='11' Name='No. of Inst. Url' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Balance' ReferenceIdx='12' Name='Balance' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Balance Url' ReferenceIdx='13' Name='Balance Url' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='On-time %' ReferenceIdx='14' Name='On-time %' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='On-time % Url' ReferenceIdx='15' Name='On-time % Url' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Status' ReferenceIdx='16' Name='Status'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Status Url' ReferenceIdx='17' Name='Status Url' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Type' attr='fulltext' name2='Type Url' attr2='href' /&gt;&lt;column name='Code' attr='fulltext' name2='Code Url' attr2='href' /&gt;&lt;column name='Description' attr='fulltext' name2='Description Url' attr2='href' /&gt;&lt;column name='Disb. On' attr='fulltext' name2='Disb. On Url' attr2='href' /&gt;&lt;column name='Loan Amount' attr='fulltext' name2='Loan Amount Url' attr2='href' /&gt;&lt;column name='No. of Inst.' attr='fulltext' name2='No. of Inst. Url' attr2='href' /&gt;&lt;column name='Balance' attr='fulltext' name2='Balance Url' attr2='href' /&gt;&lt;column name='On-time %' attr='fulltext' name2='On-time % Url' attr2='href' /&gt;&lt;column name='Status' attr='fulltext' name2='Status Url' attr2='href' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="354,50.666666666666664" sap2010:WorkflowViewState.IdRef="NExtractData_3" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="3969d4ea-7302-45cc-8447-b99229c282af" Version="V3">
+                                                  <uix:NExtractData.Target>
+                                                    <uix:TargetAnchorable BrowserURL="https://jk.mfiexpert.app/setup/customers/customersne.aspx?id=1245639" DesignTimeRectangle="57, 229, 1234, 1786" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl aaname='Type Code Description Disb. On Loan Amount No. of Inst. Balance On-time % Status' tableRow='2' tag='TABLE' /&gt;" Guid="c2935ade-19c4-490a-b49b-9a1194757eaa" InformativeScreenshot="896cf3517efe4552a7a9a9291df368bb.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Customer Setup' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                                  </uix:NExtractData.Target>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </uix:NExtractData>
+                                              </Sequence>
+                                            </ActivityAction>
+                                          </Catch>
+                                        </TryCatch.Catches>
+                                      </TryCatch>
+                                      <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Graduation&quot;).Cell(&quot;H2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[CurrentRow.ByField(&quot;LoanID&quot;)]">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ueab:WriteCellX>
+                                      <ueab:ExecuteMacroX Result="{x:Null}" DisplayName="Run Spreadsheet Macro" sap:VirtualizedContainerService.HintSize="354,50.666666666666664" sap2010:WorkflowViewState.IdRef="ExecuteMacroX_2" MacroName="Sheet3.UIpath" Workbook="[Excel]">
+                                        <ueab:ExecuteMacroX.Body>
+                                          <ActivityAction>
+                                            <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </Sequence>
+                                          </ActivityAction>
+                                        </ueab:ExecuteMacroX.Body>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ueab:ExecuteMacroX>
+                                    </Sequence>
+                                  </ActivityAction>
+                                </uix:NApplicationCard.Body>
+                                <uix:NApplicationCard.TargetApp>
+                                  <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAK3SURBVDhPRVNLSJRRFJ51lKOTFWTvoIW6yHmYSgRC5RARBL2QgtnUppRICAlCMmqjCQbz+Gd0Sv/mVY4zzvz/jNEiChINsuipY7oI0hbSA0ow069zzj9Ti8u5957vfOfcc79jsnqnYKfl8Py3Vb6c7OXsnSFrnGs8vJ+QvU0xsCYBu3MURAGeaQNMtso7SYAcrORnoIP8jHX4Poq/hvyMNbHTRpdcCQfYPOzgAAJKZoOAM1u904J1EIHNTZb2Jga09XfhSfwwRhNOjMUP4WHsGLrDV3EiMCwgGxE3+MfRdFdF5712BKIt6I1cgisYZ4IpXFe78CdrAfQiWiVYHrZgRS/GzNBunOx5hL5YM+ZTO7GUXQ1kzLRKZF3u8/MTcmgMprGSNS6RXSOghfQm3FA78DZRlw/gQEqiMWYtljLFOBXIGBU4/c/xQ9tCDgu+pTdjXtuORNSF7IPjRGw2yImY7ZK+Tsh+6htxNPDU6MFe5TVmUxUC/pXeioHIWbT092BRX5/PXIIFvQypWCPmhsqFiBM6lREYOvC9x6vEPno/ZzNjLrULntCVf8HftR1o6+vGi8H9RjXUp6/6NjQoo0YF3AclXAiwYCJZDTV2XoJ/ZzagVb0tvwStGCuZUmpwET4ka1FNyUUHLJIDyjN8SVUKSS5thxptpkwW3AlfxEDsnJBxZtAPLWdXoVO9KfowWX2GNJnkTDCJz8lKLGpl6I804ZNWgVuha/Is/tZChWNUTa3yRkQmv8B6Z3XZ3ZM46B+FJ9qKjlA7giSW2VS5BDLBol6Kwfsu1PvGJfseerqJM7PemYgHpKD9Ot87XAiG8DJej8cDR+Cnpp7uTcuMyEwQhrHSxGqugImIhFllAqkiBrD+edh4BviOGy6zQGfGixJZ71V5W5jIQlU8RNxtqTAfxDGMsXun8Bfd87FvOdGtewAAAABJRU5ErkJggg==" InformativeScreenshot="733f0b3fc200874eb78da27b7ff6e8c9.jpg" Selector="&lt;html app='msedge.exe' title='Search' /&gt;" Title="Search" Url="https://jk.mfiexpert.app/search/search.aspx?search=36448714" />
+                                </uix:NApplicationCard.TargetApp>
+                              </uix:NApplicationCard>
+                            </Sequence>
+                          </ActivityAction>
+                        </ueab:ExcelForEachRowX.Body>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:ExcelForEachRowX>
+                      <ueab:ExcelForEachRowX DisplayName="For Each (Deliq Amt and Deliq Days and topup on topup)" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="405.3333333333333,48" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_2" Range="[Excel.Sheet(&quot;Loans&quot;)]" SaveAfterEachRow="False">
+                        <ueab:ExcelForEachRowX.Body>
+                          <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                            <ActivityAction.Argument1>
+                              <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+                            </ActivityAction.Argument1>
+                            <ActivityAction.Argument2>
+                              <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                            </ActivityAction.Argument2>
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="704,1823.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="x:String" Name="PreviousLoan" />
+                                <Variable x:TypeArguments="x:String" Name="PrevLoanStatus1" />
+                              </Sequence.Variables>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign sap:VirtualizedContainerService.HintSize="642,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[PreviousLoan]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[CurrentRow.ByField("PrevLoanCode")]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <Assign sap:VirtualizedContainerService.HintSize="642,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[PrevLoanStatus1]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[CurrentRow.ByField("PrevLoanStatus")]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <If Condition="[PreviousLoan IsNot Nothing]" sap:VirtualizedContainerService.HintSize="642,1500.6666666666667" sap2010:WorkflowViewState.IdRef="If_1">
+                                <If.Then>
+                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="608,1202" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Customer Setup" sap:VirtualizedContainerService.HintSize="546,1114" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="0f8f5607-6fe0-4300-8031-b8df8df03b87" Version="V2">
+                                      <uix:NApplicationCard.Body>
+                                        <ActivityAction x:TypeArguments="x:Object">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,872" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="450,57.333333333333336" sap2010:WorkflowViewState.IdRef="NGoToUrl_3" Url="[&quot;https://jk.mfiexpert.app/search/search.aspx?search=&quot;+PreviousLoan]" Version="V3">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uix:NGoToUrl>
+                                            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="450,57.333333333333336" sap2010:WorkflowViewState.IdRef="Delay_11">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </Delay>
+                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click (Include closed Loans)" sap:VirtualizedContainerService.HintSize="450,57.333333333333336" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0f8f5607-6fe0-4300-8031-b8df8df03b87" Version="V3">
+                                              <uix:NClick.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://jk.mfiexpert.app/search/search.aspx?search=LAI-04841320" CVScreenId="9d1677d8-7ed4-4110-ab8f-0937fac51123" CvElementArea="209, 150, 125, 23" CvTextArea="221, 156, 103, 11" CvTextArgument="Include Closed Loans" CvType="Button" DesignTimeRectangle="215, 152, 118, 20" DesignTimeScaleFactor="0.8999999761581421" ElementType="Button" FullSelectorArgument="&lt;webctrl parentid='pC' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='pC' tag='TABLE' /&gt;&lt;webctrl type='submit' tag='INPUT' class='rbDecorated' aaname='Include Closed Loans' check:text='Include Closed Loans' /&gt;" Guid="d05b7981-e999-491d-aa28-435c4ccf95f1" InformativeScreenshot="3c0ae143e06274c0bfa669423b134e69.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Search' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                                              </uix:NClick.Target>
+                                              <uix:NClick.VerifyOptions>
+                                                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                  <uix:VerifyExecutionOptions.Retry>
+                                                    <InArgument x:TypeArguments="x:Boolean" />
+                                                  </uix:VerifyExecutionOptions.Retry>
+                                                  <uix:VerifyExecutionOptions.Timeout>
+                                                    <InArgument x:TypeArguments="x:Double" />
+                                                  </uix:VerifyExecutionOptions.Timeout>
+                                                </uix:VerifyExecutionOptions>
+                                              </uix:NClick.VerifyOptions>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uix:NClick>
+                                            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="450,57.333333333333336" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <TryCatch.Try>
+                                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Loan Code'" sap:VirtualizedContainerService.HintSize="200,25.333333333333332" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0f8f5607-6fe0-4300-8031-b8df8df03b87" Timeout="3" Version="V3">
+                                                  <uix:NClick.Target>
+                                                    <uix:TargetAnchorable BrowserURL="https://jk.mfiexpert.app/search/search.aspx?search=LAI-04841320" CVScreenId="04f93a39-35f1-41af-b4f6-5607dcef2f86" CvTextArea="195, 326, 66, 10" CvTextArgument="[PreviousLoan]" CvType="Text" DesignTimeRectangle="196, 324, 65, 14" DesignTimeScaleFactor="0.8999999761581421" ElementType="Text" FullSelectorArgument="&lt;webctrl tableRow='4' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='' aaname='LAI-04841320' check:innerText='LAI-04841320' /&gt;" Guid="6fc6ba3b-73e4-4d7e-809b-85ab09856c56" InformativeScreenshot="bec1fefe80fadd6b754cc18618c86068.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Search' /&gt;" SearchSteps="CV" Version="V4" Visibility="Interactive">
+                                                      <uix:TargetAnchorable.Anchors>
+                                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                          <uix:Target CVScreenId="04f93a39-35f1-41af-b4f6-5607dcef2f86" CvTextArea="195, 300, 63, 11" CvTextArgument="LOAN CODE" CvType="Text" DesignTimeRectangle="191, 292, 163, 27" ElementType="Text" FullSelectorArgument="&lt;webctrl tableRow='4' tag='TABLE' /&gt;&lt;webctrl aaname='LOAN CODE' tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='LOAN CODE' type='' tag='TH' class='' check:innerText='LOAN CODE' /&gt;" Guid="0d1c8db1-479e-41fa-a2e8-302c29007d66" SearchSteps="FuzzySelector, CV" />
+                                                        </scg:List>
+                                                      </uix:TargetAnchorable.Anchors>
+                                                    </uix:TargetAnchorable>
+                                                  </uix:NClick.Target>
+                                                  <uix:NClick.VerifyOptions>
+                                                    <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                      <uix:VerifyExecutionOptions.Retry>
+                                                        <InArgument x:TypeArguments="x:Boolean" />
+                                                      </uix:VerifyExecutionOptions.Retry>
+                                                      <uix:VerifyExecutionOptions.Timeout>
+                                                        <InArgument x:TypeArguments="x:Double" />
+                                                      </uix:VerifyExecutionOptions.Timeout>
+                                                    </uix:VerifyExecutionOptions>
+                                                  </uix:NClick.VerifyOptions>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </uix:NClick>
+                                              </TryCatch.Try>
+                                              <TryCatch.Catches>
+                                                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="422,328" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ActivityAction x:TypeArguments="s:Exception">
+                                                    <ActivityAction.Argument>
+                                                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                                    </ActivityAction.Argument>
+                                                    <Sequence sap:VirtualizedContainerService.HintSize="416,256" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click (Include closed Loans)" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0f8f5607-6fe0-4300-8031-b8df8df03b87" Version="V3">
+                                                        <uix:NClick.Target>
+                                                          <uix:TargetAnchorable BrowserURL="https://jk.mfiexpert.app/search/search.aspx?search=LAI-04841320" CVScreenId="9d1677d8-7ed4-4110-ab8f-0937fac51123" CvElementArea="209, 150, 125, 23" CvTextArea="221, 156, 103, 11" CvTextArgument="Include Closed Loans" CvType="Button" DesignTimeRectangle="215, 152, 118, 20" DesignTimeScaleFactor="0.8999999761581421" ElementType="Button" FullSelectorArgument="&lt;webctrl parentid='pC' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='pC' tag='TABLE' /&gt;&lt;webctrl type='submit' tag='INPUT' class='rbDecorated' aaname='Include Closed Loans' check:text='Include Closed Loans' /&gt;" Guid="d05b7981-e999-491d-aa28-435c4ccf95f1" InformativeScreenshot="3c0ae143e06274c0bfa669423b134e69.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Search' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                                                        </uix:NClick.Target>
+                                                        <uix:NClick.VerifyOptions>
+                                                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                            <uix:VerifyExecutionOptions.Retry>
+                                                              <InArgument x:TypeArguments="x:Boolean" />
+                                                            </uix:VerifyExecutionOptions.Retry>
+                                                            <uix:VerifyExecutionOptions.Timeout>
+                                                              <InArgument x:TypeArguments="x:Double" />
+                                                            </uix:VerifyExecutionOptions.Timeout>
+                                                          </uix:VerifyExecutionOptions>
+                                                        </uix:NClick.VerifyOptions>
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                      </uix:NClick>
+                                                      <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="Delay_12">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                      </Delay>
+                                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Loan Code'" sap:VirtualizedContainerService.HintSize="354,50.666666666666664" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0f8f5607-6fe0-4300-8031-b8df8df03b87" Timeout="3" Version="V3">
+                                                        <uix:NClick.Target>
+                                                          <uix:TargetAnchorable BrowserURL="https://jk.mfiexpert.app/search/search.aspx?search=LAI-04841320" CVScreenId="04f93a39-35f1-41af-b4f6-5607dcef2f86" CvTextArea="195, 326, 66, 10" CvTextArgument="[PreviousLoan]" CvType="Text" DesignTimeRectangle="196, 324, 65, 14" DesignTimeScaleFactor="0.8999999761581421" ElementType="Text" FullSelectorArgument="&lt;webctrl tableRow='4' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='' aaname='LAI-04841320' check:innerText='LAI-04841320' /&gt;" Guid="6fc6ba3b-73e4-4d7e-809b-85ab09856c56" InformativeScreenshot="bec1fefe80fadd6b754cc18618c86068.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Search' /&gt;" SearchSteps="CV" Version="V4" Visibility="Interactive">
+                                                            <uix:TargetAnchorable.Anchors>
+                                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                <uix:Target CVScreenId="04f93a39-35f1-41af-b4f6-5607dcef2f86" CvTextArea="195, 300, 63, 11" CvTextArgument="LOAN CODE" CvType="Text" DesignTimeRectangle="191, 292, 163, 27" ElementType="Text" FullSelectorArgument="&lt;webctrl tableRow='4' tag='TABLE' /&gt;&lt;webctrl aaname='LOAN CODE' tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='LOAN CODE' type='' tag='TH' class='' check:innerText='LOAN CODE' /&gt;" Guid="0d1c8db1-479e-41fa-a2e8-302c29007d66" SearchSteps="FuzzySelector, CV" />
+                                                              </scg:List>
+                                                            </uix:TargetAnchorable.Anchors>
+                                                          </uix:TargetAnchorable>
+                                                        </uix:NClick.Target>
+                                                        <uix:NClick.VerifyOptions>
+                                                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                            <uix:VerifyExecutionOptions.Retry>
+                                                              <InArgument x:TypeArguments="x:Boolean" />
+                                                            </uix:VerifyExecutionOptions.Retry>
+                                                            <uix:VerifyExecutionOptions.Timeout>
+                                                              <InArgument x:TypeArguments="x:Double" />
+                                                            </uix:VerifyExecutionOptions.Timeout>
+                                                          </uix:VerifyExecutionOptions>
+                                                        </uix:NClick.VerifyOptions>
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                      </uix:NClick>
+                                                    </Sequence>
+                                                  </ActivityAction>
+                                                </Catch>
+                                              </TryCatch.Catches>
+                                            </TryCatch>
+                                            <uix:NCheckState DisplayName="Check App State 'Highest Deliquent Days'" sap:VirtualizedContainerService.HintSize="450,57.333333333333336" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="0f8f5607-6fe0-4300-8031-b8df8df03b87" Version="V3">
+                                              <uix:NCheckState.IfExists>
+                                                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,25.333333333333332" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                                  <Sequence.Variables>
+                                                    <Variable x:TypeArguments="x:String" Name="HighestDeliqDays" />
+                                                    <Variable x:TypeArguments="x:String" Name="HighDeliqAmt" />
+                                                    <Variable x:TypeArguments="x:String" Name="HighDeliqDays" />
+                                                  </Sequence.Variables>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <uix:NGetText DisplayName="Get Text 'Highest Deliquent Days'" sap:VirtualizedContainerService.HintSize="434,191.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="0f8f5607-6fe0-4300-8031-b8df8df03b87" TextString="[HighDeliqDays]" Version="V3">
+                                                    <uix:NGetText.Target>
+                                                      <uix:TargetAnchorable BrowserURL="https://jk.mfiexpert.app/loans/loanaccountsne.aspx?id=4624898" CVScreenId="0017b806-169c-4d8b-be1e-eb7ff854308d" CvTextArea="987, 616, 14, 11" CvType="AnyWordGroup" DesignTimeRectangle="983, 610, 397, 25" DesignTimeScaleFactor="0.8999999761581421" ElementType="Text" FullSelectorArgument="&lt;webctrl class='iTable' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableCol='4' tableRow='16' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl class='iTable' tag='TABLE' /&gt;&lt;webctrl type='' class='iCol iData' tag='TD' /&gt;" Guid="e6410e71-dba6-46ae-84a4-a491b2771bdf" InformativeScreenshot="7cbf90922ae980899e73a63ccb84e83b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loan Account' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                                        <uix:TargetAnchorable.Anchors>
+                                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                            <uix:Target CVScreenId="0017b806-169c-4d8b-be1e-eb7ff854308d" CvTextArea="854, 615, 124, 15" CvTextArgument="Highest Deliquent Days :" CvType="Text" DesignTimeRectangle="718, 610, 264, 25" ElementType="Text" FullSelectorArgument="&lt;webctrl class='iTable' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableCol='3' tableRow='16' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl class='iTable' tag='TABLE' /&gt;&lt;webctrl type='' class='iCol iLabel' tag='TD' aaname='Highest Deliquent Days : ' check:innerText='Highest Deliquent Days :' /&gt;" Guid="d816f4f9-c6b8-4d9a-b9b9-1d839b97de70" SearchSteps="FuzzySelector, CV" />
+                                                          </scg:List>
+                                                        </uix:TargetAnchorable.Anchors>
+                                                      </uix:TargetAnchorable>
+                                                    </uix:NGetText.Target>
+                                                  </uix:NGetText>
+                                                  <uix:NGetText DisplayName="Get Text 'Highest Deliquent Amount'" sap:VirtualizedContainerService.HintSize="434,191.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="0f8f5607-6fe0-4300-8031-b8df8df03b87" TextString="[HighDeliqAmt]" Version="V3">
+                                                    <uix:NGetText.Target>
+                                                      <uix:TargetAnchorable BrowserURL="https://jk.mfiexpert.app/loans/loanaccountsne.aspx?id=4624898" CVScreenId="0017b806-169c-4d8b-be1e-eb7ff854308d" CvTextArea="324, 616, 35, 11" CvType="AnyWordGroup" DesignTimeRectangle="321, 610, 396, 25" DesignTimeScaleFactor="0.8999999761581421" ElementType="Text" FullSelectorArgument="&lt;webctrl class='iTable' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableCol='2' tableRow='16' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl class='iTable' tag='TABLE' /&gt;&lt;webctrl type='' class='iCol iData' tag='TD' /&gt;" Guid="1bc6ae53-0e26-455c-828c-26094712d61f" InformativeScreenshot="5d2b16b90fab2c57e178247dce30e632.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loan Account' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                                        <uix:TargetAnchorable.Anchors>
+                                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                            <uix:Target CVScreenId="0017b806-169c-4d8b-be1e-eb7ff854308d" CvTextArea="175, 616, 139, 14" CvTextArgument="Highest Deliquent Amount:" CvType="Text" DesignTimeRectangle="55, 610, 265, 25" ElementType="Text" FullSelectorArgument="&lt;webctrl class='iTable' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='16' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl class='iTable' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='iCol iLabel' aaname='Highest Deliquent Amount : ' check:innerText='Highest Deliquent Amount :' /&gt;" Guid="18cf272d-b0fc-4046-8d73-c210dc09651f" SearchSteps="FuzzySelector, CV" />
+                                                          </scg:List>
+                                                        </uix:TargetAnchorable.Anchors>
+                                                      </uix:TargetAnchorable>
+                                                    </uix:NGetText.Target>
+                                                  </uix:NGetText>
+                                                  <ueab:WriteCellX Cell="[CurrentRow.ByField(&quot;DeliqDays&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,196.66666666666666" sap2010:WorkflowViewState.IdRef="WriteCellX_2" Value="[HighDeliqDays]" />
+                                                  <ueab:WriteCellX Cell="[CurrentRow.ByField(&quot;DeliqAmt&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,190" sap2010:WorkflowViewState.IdRef="WriteCellX_3" Value="[HighDeliqAmt]" />
+                                                </Sequence>
+                                              </uix:NCheckState.IfExists>
+                                              <uix:NCheckState.IfNotExists>
+                                                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,25.333333333333332" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ueab:WriteCellX Cell="[CurrentRow.ByField(&quot;DeliqDays&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,196.66666666666666" sap2010:WorkflowViewState.IdRef="WriteCellX_4" Value="[0]" />
+                                                  <ueab:WriteCellX Cell="[CurrentRow.ByField(&quot;DeliqAmt&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,190" sap2010:WorkflowViewState.IdRef="WriteCellX_5" Value="[0]" />
+                                                </Sequence>
+                                              </uix:NCheckState.IfNotExists>
+                                              <uix:NCheckState.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://jk.mfiexpert.app/loans/loanaccountsne.aspx?id=4624898" CVScreenId="0017b806-169c-4d8b-be1e-eb7ff854308d" CvTextArea="854, 615, 124, 15" CvTextArgument="Highest Deliquent Days :" CvType="Text" DesignTimeRectangle="718, 610, 264, 25" DesignTimeScaleFactor="0.8999999761581421" ElementType="Text" FullSelectorArgument="&lt;webctrl class='iTable' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableCol='3' tableRow='16' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl class='iTable' tag='TABLE' /&gt;&lt;webctrl type='' class='iCol iLabel' tag='TD' aaname='Highest Deliquent Days : ' check:innerText='Highest Deliquent Days :' /&gt;" Guid="fa9fd1b0-87d0-4e1a-8093-4b7fe9f5d5d1" InformativeScreenshot="59aa1dedcdb4fbd0593685156ff6d46f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loan Account' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="0017b806-169c-4d8b-be1e-eb7ff854308d" CvTextArea="854, 615, 124, 15" CvTextArgument="Highest Deliquent Days :" CvType="Text" DesignTimeRectangle="854, 616, 122, 14" ElementType="Text" Guid="541ae881-b998-400b-a162-084dec4e4865" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NCheckState.Target>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uix:NCheckState>
+                                            <If Condition="[PrevLoanStatus1=&quot;Active - Good Standing&quot;]" DisplayName="If status = good standing, check if topup on topup" sap:VirtualizedContainerService.HintSize="450,494.6666666666667" sap2010:WorkflowViewState.IdRef="If_3">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <If.Then>
+                                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,193.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                                                  <Sequence.Variables>
+                                                    <Variable x:TypeArguments="x:Boolean" Name="Topup" />
+                                                  </Sequence.Variables>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Edit Data'" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0f8f5607-6fe0-4300-8031-b8df8df03b87" Version="V3">
+                                                    <uix:NClick.Target>
+                                                      <uix:TargetAnchorable BrowserURL="https://jk.mfiexpert.app/loans/loanaccountsne.aspx?id=4624898" CVScreenId="4cf8cd48-ea5c-43e6-907f-eba657ea0d67" CvElementArea="50, 175, 76, 40" CvTextArea="65, 190, 47, 11" CvTextArgument="Edit Data" CvType="Button" DesignTimeRectangle="52, 177, 74, 37" DesignTimeScaleFactor="0.8999999761581421" FullSelectorArgument="&lt;webctrl parentid='pC' tableRow='1' tag='TABLE' /&gt;&lt;webctrl class='rtsLink' tableRow='2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='pC' tag='TABLE' /&gt;&lt;webctrl class='rtsLink' type='' tag='SPAN' aaname='' check:innerText='Edit Data' /&gt;" Guid="1f6b1ade-91fb-4d44-9800-c424744a8b1d" InformativeScreenshot="41aed260bb9a2f1796644bdbe588b51b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loan Account' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                                                    </uix:NClick.Target>
+                                                    <uix:NClick.VerifyOptions>
+                                                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                        <uix:VerifyExecutionOptions.Retry>
+                                                          <InArgument x:TypeArguments="x:Boolean" />
+                                                        </uix:VerifyExecutionOptions.Retry>
+                                                        <uix:VerifyExecutionOptions.Timeout>
+                                                          <InArgument x:TypeArguments="x:Double" />
+                                                        </uix:VerifyExecutionOptions.Timeout>
+                                                      </uix:VerifyExecutionOptions>
+                                                    </uix:NClick.VerifyOptions>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </uix:NClick>
+                                                  <uix:NCheckState DisplayName="Check App State 'Top Up'" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="0f8f5607-6fe0-4300-8031-b8df8df03b87" Version="V3">
+                                                    <uix:NCheckState.IfExists>
+                                                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,25.333333333333332" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <uix:NGetAttributeGeneric x:TypeArguments="x:Boolean" Attribute="checked" DisplayName="Get Attribute 'Top Up'" sap:VirtualizedContainerService.HintSize="388,57.333333333333336" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_2" Result="[Topup]" ScopeIdentifier="0f8f5607-6fe0-4300-8031-b8df8df03b87" Version="V3">
+                                                          <uix:NGetAttributeGeneric.Target>
+                                                            <uix:TargetAnchorable BrowserURL="https://jk.mfiexpert.app/loans/loanaccountsne.aspx?id=4624898" CVScreenId="1b138f93-c39c-484b-9e48-2860eaf9e57e" CvElementArea="512, 514, 15, 15" CvType="CheckBox" DesignTimeRectangle="514, 516, 12, 12" DesignTimeScaleFactor="0.8999999761581421" ElementType="CheckBox" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='37' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='checkbox' tag='INPUT' class='' aaname='' /&gt;" Guid="c8e33b33-6f52-409d-8ae0-c9c03430a7d1" InformativeScreenshot="773946231602acba3c479cc343710fd2.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loan Account' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                                              <uix:TargetAnchorable.Anchors>
+                                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                                  <uix:Target CVScreenId="1b138f93-c39c-484b-9e48-2860eaf9e57e" CvTextArea="466, 517, 40, 14" CvTextArgument="Top Up" CvType="Text" DesignTimeRectangle="358, 511, 150, 23" ElementType="Text" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='37' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='tblCol colLabel' aaname='Top Up' check:innerText='Top Up' /&gt;" Guid="ffd05485-aa33-4d85-93b2-f615d4206ea8" SearchSteps="FuzzySelector, CV" />
+                                                                </scg:List>
+                                                              </uix:TargetAnchorable.Anchors>
+                                                            </uix:TargetAnchorable>
+                                                          </uix:NGetAttributeGeneric.Target>
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                        </uix:NGetAttributeGeneric>
+                                                        <ueab:WriteCellX Cell="[CurrentRow.ByField(&quot;TopupOnTopup&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="388,50.666666666666664" sap2010:WorkflowViewState.IdRef="WriteCellX_6" Value="[Topup.ToString]">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                        </ueab:WriteCellX>
+                                                      </Sequence>
+                                                    </uix:NCheckState.IfExists>
+                                                    <uix:NCheckState.IfNotExists>
+                                                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,25.333333333333332" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                      </Sequence>
+                                                    </uix:NCheckState.IfNotExists>
+                                                    <uix:NCheckState.Target>
+                                                      <uix:TargetAnchorable BrowserURL="https://jk.mfiexpert.app/loans/loanaccountsne.aspx?id=4624898" CVScreenId="78eca05c-3cfb-4e95-acf9-a4ec40a4e344" CvElementArea="512, 514, 15, 15" CvType="CheckBox" DesignTimeRectangle="514, 516, 12, 12" DesignTimeScaleFactor="0.8999999761581421" ElementType="CheckBox" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='37' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='checkbox' tag='INPUT' class='' aaname='' /&gt;" Guid="6371fc9c-c663-4541-a321-188ead522d9d" InformativeScreenshot="6714f065f03ea085fbaba6922c629201.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loan Account' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                                        <uix:TargetAnchorable.Anchors>
+                                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                            <uix:Target CVScreenId="78eca05c-3cfb-4e95-acf9-a4ec40a4e344" CvTextArea="466, 517, 40, 14" CvTextArgument="Top Up" CvType="Text" DesignTimeRectangle="358, 511, 150, 23" ElementType="Text" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='37' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='tblCol colLabel' aaname='Top Up' check:innerText='Top Up' /&gt;" Guid="af804be9-9c48-4639-8d70-cbf20dad62ee" SearchSteps="FuzzySelector, CV" />
+                                                          </scg:List>
+                                                        </uix:TargetAnchorable.Anchors>
+                                                      </uix:TargetAnchorable>
+                                                    </uix:NCheckState.Target>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </uix:NCheckState>
+                                                </Sequence>
+                                              </If.Then>
+                                              <If.Else>
+                                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ui:Continue sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="Continue_2" />
+                                                </Sequence>
+                                              </If.Else>
+                                            </If>
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </uix:NApplicationCard.Body>
+                                      <uix:NApplicationCard.TargetApp>
+                                        <uix:TargetApp Area="-1448, 50, 1456, 868" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAK3SURBVDhPRVNLSJRRFJ51lKOTFWTvoIW6yHmYSgRC5RARBL2QgtnUppRICAlCMmqjCQbz+Gd0Sv/mVY4zzvz/jNEiChINsuipY7oI0hbSA0ow069zzj9Ti8u5957vfOfcc79jsnqnYKfl8Py3Vb6c7OXsnSFrnGs8vJ+QvU0xsCYBu3MURAGeaQNMtso7SYAcrORnoIP8jHX4Poq/hvyMNbHTRpdcCQfYPOzgAAJKZoOAM1u904J1EIHNTZb2Jga09XfhSfwwRhNOjMUP4WHsGLrDV3EiMCwgGxE3+MfRdFdF5712BKIt6I1cgisYZ4IpXFe78CdrAfQiWiVYHrZgRS/GzNBunOx5hL5YM+ZTO7GUXQ1kzLRKZF3u8/MTcmgMprGSNS6RXSOghfQm3FA78DZRlw/gQEqiMWYtljLFOBXIGBU4/c/xQ9tCDgu+pTdjXtuORNSF7IPjRGw2yImY7ZK+Tsh+6htxNPDU6MFe5TVmUxUC/pXeioHIWbT092BRX5/PXIIFvQypWCPmhsqFiBM6lREYOvC9x6vEPno/ZzNjLrULntCVf8HftR1o6+vGi8H9RjXUp6/6NjQoo0YF3AclXAiwYCJZDTV2XoJ/ZzagVb0tvwStGCuZUmpwET4ka1FNyUUHLJIDyjN8SVUKSS5thxptpkwW3AlfxEDsnJBxZtAPLWdXoVO9KfowWX2GNJnkTDCJz8lKLGpl6I804ZNWgVuha/Is/tZChWNUTa3yRkQmv8B6Z3XZ3ZM46B+FJ9qKjlA7giSW2VS5BDLBol6Kwfsu1PvGJfseerqJM7PemYgHpKD9Ot87XAiG8DJej8cDR+Cnpp7uTcuMyEwQhrHSxGqugImIhFllAqkiBrD+edh4BviOGy6zQGfGixJZ71V5W5jIQlU8RNxtqTAfxDGMsXun8Bfd87FvOdGtewAAAABJRU5ErkJggg==" InformativeScreenshot="19edb62fbe92249bd85dc555a6685d89.jpg" Selector="&lt;html app='msedge.exe' title='Customer Setup' /&gt;" Title="Customer Setup" Url="https://jk.mfiexpert.app/setup/customers/customersne.aspx?id=2135747" />
+                                      </uix:NApplicationCard.TargetApp>
+                                    </uix:NApplicationCard>
+                                  </Sequence>
+                                </If.Then>
+                                <If.Else>
+                                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:Continue sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="Continue_1" />
+                                  </Sequence>
+                                </If.Else>
+                              </If>
+                            </Sequence>
+                          </ActivityAction>
+                        </ueab:ExcelForEachRowX.Body>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:ExcelForEachRowX>
+                    </Sequence>
+                  </ActivityAction>
+                </ueab:ExcelApplicationCard.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ueab:ExcelApplicationCard>
+            </Sequence>
+          </ActivityAction>
+        </ueab:ExcelProcessScopeX.Body>
+      </ueab:ExcelProcessScopeX>
+    </Sequence>
+  </Sequence>
+</Activity>

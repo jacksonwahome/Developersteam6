@@ -1,0 +1,401 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="618,1538.6666666666667" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugad="clr-namespace:UiPath.GSuite.Activities.Drive;assembly=UiPath.GSuite.Activities" xmlns:ugas="clr-namespace:UiPath.GSuite.Activities.Sheets;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabf="clr-namespace:UiPath.Mail.Activities.Business.ForEachMail;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="96">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Activities.System.Binding</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Presentations</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>UiPath.Mail.Activities.Business.ForEachMail</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Mail.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.GSuite.Models</x:String>
+      <x:String>UiPath.Shared.Api.Google.Gmail.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Filters</x:String>
+      <x:String>UiPath.GSuite.Gmail.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Drive</x:String>
+      <x:String>UiPath.GSuite.Activities.Drive.Enums</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.GSuite.Activities.Sheets</x:String>
+      <x:String>UiPath.GSuite.Activities.Sheets.Enums</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Contracts</x:String>
+      <x:String>UiPath.GSuite.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="76">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <ueab:SequenceX DisplayName="Single Excel Process Scope" sap:VirtualizedContainerService.HintSize="628,1474" sap2010:WorkflowViewState.IdRef="SequenceX_1">
+    <ueab:SequenceX.Variables>
+      <Variable x:TypeArguments="ue:IWorkbookQuickHandle" Default="[new WorkbookQuickHandle(workbookPath:=&quot;Project_Notebook.xlsx&quot;,visible:=True,autoSave:=False,createNew:=True,readOnly:=False,isWorkspace:=True)]" Name="Notes" />
+      <Variable x:TypeArguments="x:String" Name="CurrentInvoice" />
+      <Variable x:TypeArguments="x:Object" Name="ClientCode" />
+      <Variable x:TypeArguments="x:String" Name="ClientDiscount" />
+      <Variable x:TypeArguments="x:String" Name="FileName" />
+    </ueab:SequenceX.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="muthuijackson@gmail.com (1)" DisplayName="Use Gmail" EmailAddress="muthuijackson@gmail.com" sap:VirtualizedContainerService.HintSize="586,1409.3333333333333" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_5" Timeout="90" UseConnectionService="False">
+      <umab:GmailApplicationCard.Body>
+        <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Gmail" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="552,1201.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <umab:ForEachEmailX DisplayName="For Each Email" sap:VirtualizedContainerService.HintSize="510,624.6666666666666" sap2010:WorkflowViewState.IdRef="ForEachEmailX_2" IncludeSubfolders="False" Mails="[Gmail.Folder(&quot;Automation&quot;)]" NumberOfEmailsLimit="100" UnreadOnly="False" WithAttachmentsOnly="False">
+              <umab:ForEachEmailX.Body>
+                <ActivityAction x:TypeArguments="snm:MailMessage, x:Int32">
+                  <ActivityAction.Argument1>
+                    <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="CurrentMail" />
+                  </ActivityAction.Argument1>
+                  <ActivityAction.Argument2>
+                    <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                  </ActivityAction.Argument2>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,319.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <umab:SaveMailAttachmentsX Attachments="{x:Null}" DisplayName="Save Email Attachments" ExcludeInlineAttachments="True" FolderPath="[string.Format(&quot;{0}\Invoices&quot;, System.IO.Directory.GetCurrentDirectory())]" sap:VirtualizedContainerService.HintSize="434,254.66666666666666" sap2010:WorkflowViewState.IdRef="SaveMailAttachmentsX_3" Message="[CurrentMail]" OverwriteExisting="True" />
+                  </Sequence>
+                </ActivityAction>
+              </umab:ForEachEmailX.Body>
+              <umab:ForEachEmailX.MailFilter>
+                <umabf:MailFilterArgument LogicalOperator="And">
+                  <umabf:MailFilterArgument.Filters>
+                    <scg:List x:TypeArguments="umabf:SingleMailFilterArgument" Capacity="1">
+                      <umabf:SingleMailFilterArgument DateEqualsFilter="{x:Null}" Criteria="From" DateFilter="SevenDays" Operator="Contains" Value="automation-first@uipath.com" />
+                    </scg:List>
+                  </umabf:MailFilterArgument.Filters>
+                </umabf:MailFilterArgument>
+              </umab:ForEachEmailX.MailFilter>
+            </umab:ForEachEmailX>
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: ACME System 1 - Dashboard" sap:VirtualizedContainerService.HintSize="510,65.33333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="96d5f27f-b740-461d-8f99-8ce3b570a10f" Version="V2">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="720,3812" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ugad:GoogleDriveApplicationScope ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" Timeout="{x:Null}" Account="muthuijackson@gmail.com" Connector="uipath-google-drive" DisplayName="Use Google Drive" sap:VirtualizedContainerService.HintSize="678,3744.6666666666665" sap2010:WorkflowViewState.IdRef="GoogleDriveApplicationScope_1" UseConnectionService="False" UserEmail="muthuijackson@gmail.com">
+                      <ugad:GoogleDriveApplicationScope.Body>
+                        <ActivityAction x:TypeArguments="ugad:IGoogleDriveTarget">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ugad:IGoogleDriveTarget" Name="GoogleDrive" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="644,3575.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="[string.Format(&quot;{0}\Invoices&quot;, System.IO.Directory.GetCurrentDirectory())]" sap:VirtualizedContainerService.HintSize="602,3508" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+                              <ui:ForEachFileX.Body>
+                                <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
+                                  <ActivityAction.Argument1>
+                                    <DelegateInArgument x:TypeArguments="si:FileInfo" Name="CurrentFile" />
+                                  </ActivityAction.Argument1>
+                                  <ActivityAction.Argument2>
+                                    <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                                  </ActivityAction.Argument2>
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="568,3214" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uga:UploadFile ContinueOnError="{x:Null}" AuthScopesInvalid="False" Convert="True" DisplayName="Upload File" DriveTarget="[GoogleDrive]" sap:VirtualizedContainerService.HintSize="526,281.3333333333333" sap2010:WorkflowViewState.IdRef="UploadFile_1" LocalFilePath="[CurrentFile.FullName]" ParentFolderName="Practice" ParentId="https://drive.google.com/drive/folders/1L_T17iIBJ4M-197C1UBKPcv6oX01zh2j" ParentIdSelectionMode="Browse" Result="[CurrentInvoice]" SupportsTeamDrives="False" UpdateExisting="True" />
+                                    <ugas:GoogleSheetsApplicationScope ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" FileId="{x:Null}" Filename="{x:Null}" ParentFolderId="{x:Null}" ParentFolderPath="{x:Null}" SpreadsheetName="{x:Null}" Timeout="{x:Null}" Account="muthuijackson@gmail.com" Action="UseExisting" Connector="uipath-google-sheets" DisplayName="Use Google Spreadsheet" sap:VirtualizedContainerService.HintSize="526,2865.3333333333335" sap2010:WorkflowViewState.IdRef="GoogleSheetsApplicationScope_1" Mode="EnterId" SpreadsheetId="[CurrentInvoice]" UseConnectionService="False" UserEmail="muthuijackson@gmail.com">
+                                      <ugas:GoogleSheetsApplicationScope.Body>
+                                        <ActivityAction x:TypeArguments="ugas:IGoogleSheetTarget">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="ugas:IGoogleSheetTarget" Name="Spreadsheet" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="492,2545.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <uga:ReadCell CellValue="{x:Null}" ContinueOnError="{x:Null}" SpreadsheetId="{x:Null}" AuthScopesInvalid="False" Cell="E8" DisplayName="Read Cell" GoogleSpreadsheet="[Spreadsheet]" sap:VirtualizedContainerService.HintSize="450,224" sap2010:WorkflowViewState.IdRef="ReadCell_1" SheetName="Invoice">
+                                              <uga:ReadCell.CellValueGeneric>
+                                                <OutArgument x:TypeArguments="x:Object">[ClientCode]</OutArgument>
+                                              </uga:ReadCell.CellValueGeneric>
+                                            </uga:ReadCell>
+                                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Insert the'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,259.3333333333333" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="96d5f27f-b740-461d-8f99-8ce3b570a10f" Text="[UiPathObjectExtensions.AsText(ClientCode)]" Version="V3">
+                                              <uix:NTypeInto.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/first-automation/vendor" CvElementArea="216, 570, 346, 69" CvType="InputBox" DesignTimeRectangle="221, 572, 277, 64" DesignTimeScaleFactor="1.5" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='vendor' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='vendor' tag='INPUT' type='email' class='' placeholder='Type the client code' aaname='' /&gt;" Guid="dc104500-5259-4069-93c4-850356e8f58e" InformativeScreenshot="4bb7536fcd52f9bd69d14474f799f0e1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CvTextArea="220, 514, 1058, 33" CvTextArgument="Insert the client code to generate the discount value according to the promotion." CvType="Text" DesignTimeRectangle="221, 508, 1500, 43" ElementType="Text" FullSelectorArgument="&lt;webctrl class='instructions' parentid='second' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='instructions' parentid='second' tag='DIV' type='' aaname='                 Insert the client code to generate the discount value according to the promotion.             ' check:innerText='Insert the client code to generate the discount value according to the promotion.' /&gt;" SearchSteps="FuzzySelector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NTypeInto.Target>
+                                            </uix:NTypeInto>
+                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'BUTTON submitButton'" sap:VirtualizedContainerService.HintSize="450,198.66666666666666" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="96d5f27f-b740-461d-8f99-8ce3b570a10f" Version="V3">
+                                              <uix:NClick.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/first-automation/vendor" DesignTimeRectangle="497, 571, 63, 67" DesignTimeScaleFactor="1.5" ElementType="Button" FullSelectorArgument="&lt;webctrl id='submitButton' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='submitButton' tag='BUTTON' type='submit' class='' aaname='' /&gt;" Guid="13a1ec36-87ca-499c-94af-82573a2c1e56" InformativeScreenshot="c3990282b097d24602b3d0b69e32c283.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target DesignTimeRectangle="512, 586, 33, 36" FullSelectorArgument="&lt;webctrl parentid='submitButton' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='submitButton' tag='I' type='' class='fas fa-arrow-right' aaname='' /&gt;" SearchSteps="FuzzySelector" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NClick.Target>
+                                            </uix:NClick>
+                                            <uix:NGetText DisplayName="Get Text 'Discount'" sap:VirtualizedContainerService.HintSize="450,198.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="96d5f27f-b740-461d-8f99-8ce3b570a10f" TextString="[ClientDiscount]" Version="V3">
+                                              <uix:NGetText.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/first-automation/vendor" CvTextArea="208, 765, 106, 48" CvType="AnyWordGroup" DesignTimeRectangle="209, 764, 598, 175" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl id='discount' tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl id='discount' tag='H2' type='' class='discount no-discount' /&gt;" Guid="d175d20f-38e7-4f97-acbe-5ba27a496f77" InformativeScreenshot="b86ab296f273aabae2e90da0b7abdef9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CvTextArea="207, 693, 157, 31" CvTextArgument="Discount" CvType="Text" DesignTimeRectangle="209, 690, 157, 44" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='product-card' tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='product-card' tag='H1' type='' class='' aaname='Discount' check:innerText='Discount' /&gt;" SearchSteps="FuzzySelector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NGetText.Target>
+                                            </uix:NGetText>
+                                            <If Condition="[ClientDiscount &lt;&gt; string.Format(&quot;This client doesn't benefit from any discount&quot;)]" sap:VirtualizedContainerService.HintSize="450,783.3333333333334" sap2010:WorkflowViewState.IdRef="If_1">
+                                              <If.Then>
+                                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,302" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <uga:WriteCell ContinueOnError="{x:Null}" Request="{x:Null}" SpreadsheetId="{x:Null}" AuthScopesInvalid="False" Cell="E18" DisplayName="Write Cell" GoogleSpreadsheet="[Spreadsheet]" sap:VirtualizedContainerService.HintSize="354,217.33333333333334" sap2010:WorkflowViewState.IdRef="WriteCell_1" IsInsideBatchUpdateScope="False" SheetName="Invoice" Value="[ClientDiscount]" />
+                                                </Sequence>
+                                              </If.Then>
+                                              <If.Else>
+                                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,302" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <uga:WriteCell ContinueOnError="{x:Null}" Request="{x:Null}" SpreadsheetId="{x:Null}" AuthScopesInvalid="False" Cell="E18" DisplayName="Write Cell" GoogleSpreadsheet="[Spreadsheet]" sap:VirtualizedContainerService.HintSize="354,217.33333333333334" sap2010:WorkflowViewState.IdRef="WriteCell_3" IsInsideBatchUpdateScope="False" SheetName="Invoice" Value="0" />
+                                                </Sequence>
+                                              </If.Else>
+                                            </If>
+                                            <uga:WriteCell ContinueOnError="{x:Null}" Request="{x:Null}" SpreadsheetId="{x:Null}" AuthScopesInvalid="False" Cell="A31" DisplayName="Write Cell" GoogleSpreadsheet="[Spreadsheet]" sap:VirtualizedContainerService.HintSize="450,234.66666666666666" sap2010:WorkflowViewState.IdRef="WriteCell_2" IsInsideBatchUpdateScope="False" SheetName="Invoice" Value="Jackson Wahome muthuijackson@gmail.com" />
+                                            <ui:TextToLeftRight TextToRight="{x:Null}" DisplayName="Text to Left/Right" FullText="[CurrentFile.Name]" sap:VirtualizedContainerService.HintSize="450,316.6666666666667" sap2010:WorkflowViewState.IdRef="TextToLeftRight_1" Separator="." SeparatorKey="Custom" TextToLeft="[FileName]" />
+                                            <uga:DownloadSpreadsheet ContinueOnError="{x:Null}" LocalFilepath="{x:Null}" SpreadsheetId="{x:Null}" AuthScopesInvalid="False" DisplayName="Download Spreadsheet" DownloadAs="Pdf" DownloadPath="[string.Format(&quot;PDFS\{0}.pdf&quot;, FileName)]" GoogleSpreadsheet="[Spreadsheet]" sap:VirtualizedContainerService.HintSize="450,262.6666666666667" sap2010:WorkflowViewState.IdRef="DownloadSpreadsheet_1" />
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </ugas:GoogleSheetsApplicationScope.Body>
+                                      <ugas:GoogleSheetsApplicationScope.CredentialID>
+                                        <InArgument x:TypeArguments="x:String">
+                                          <Literal x:TypeArguments="x:String" Value="" />
+                                        </InArgument>
+                                      </ugas:GoogleSheetsApplicationScope.CredentialID>
+                                      <ugas:GoogleSheetsApplicationScope.CredentialSecret>
+                                        <InArgument x:TypeArguments="x:String">
+                                          <Literal x:TypeArguments="x:String" Value="" />
+                                        </InArgument>
+                                      </ugas:GoogleSheetsApplicationScope.CredentialSecret>
+                                    </ugas:GoogleSheetsApplicationScope>
+                                  </Sequence>
+                                </ActivityAction>
+                              </ui:ForEachFileX.Body>
+                            </ui:ForEachFileX>
+                          </Sequence>
+                        </ActivityAction>
+                      </ugad:GoogleDriveApplicationScope.Body>
+                      <ugad:GoogleDriveApplicationScope.CredentialID>
+                        <InArgument x:TypeArguments="x:String">
+                          <Literal x:TypeArguments="x:String" Value="" />
+                        </InArgument>
+                      </ugad:GoogleDriveApplicationScope.CredentialID>
+                      <ugad:GoogleDriveApplicationScope.CredentialSecret>
+                        <InArgument x:TypeArguments="x:String">
+                          <Literal x:TypeArguments="x:String" Value="" />
+                        </InArgument>
+                      </ugad:GoogleDriveApplicationScope.CredentialSecret>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ugad:GoogleDriveApplicationScope>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="-11, -11, 1942, 1030" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="4a5794c6d7b272ee23b3a84c5720af09.jpg" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Dashboard' /&gt;" Title="ACME System 1 - Dashboard" Url="https://acme-test.uipath.com/first-automation/vendor" />
+              </uix:NApplicationCard.TargetApp>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NApplicationCard>
+            <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Gmail]" Cc="wahome.j@outlook.com" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="510,446.6666666666667" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Invoices from Ui path" To="muthuijackson8890@gmail.com" UseDocumentAsBody="False">
+              <umab:SendMailX.Files>
+                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
+                  <InArgument x:TypeArguments="x:String">[string.Format("{0}\PDFS", System.IO.Directory.GetCurrentDirectory())]</InArgument>
+                </scg:List>
+              </umab:SendMailX.Files>
+              <umab:SendMailX.HtmlBodyFromFile>
+                <umabh:HtmlContentArgument FilePath="{x:Null}" HtmlBody="&lt;HTML&gt;&lt;HEAD&gt;&#xD;&#xA;&lt;STYLE type=text/css&gt;&#xD;&#xA;        body {&#xD;&#xA;            font-family: Calibri;&#xD;&#xA;        }&#xD;&#xA;&#xD;&#xA;        p {&#xD;&#xA;            margin: 0;&#xD;&#xA;        }&#xD;&#xA;&#xD;&#xA;        .mapping {&#xD;&#xA;            background-color: #D3D4D7;&#xD;&#xA;            color: black;&#xD;&#xA;            padding: 1px;&#xD;&#xA;        }&#xD;&#xA;    &lt;/STYLE&gt;&#xD;&#xA;&lt;!-- Instruct the web browser control to use IE 6 to render the page. --&gt;&#xD;&#xA;&lt;META content=IE=6 http-equiv=X-UA-Compatible&gt;&lt;/HEAD&gt;&#xD;&#xA;&lt;BODY&gt;These are the invoices for today, please process the client orders ASAP&lt;/BODY&gt;&lt;/HTML&gt;">
+                  <umabh:HtmlContentArgument.RuntimeImages>
+                    <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                  </umabh:HtmlContentArgument.RuntimeImages>
+                  <umabh:HtmlContentArgument.ValueMappings>
+                    <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
+                  </umabh:HtmlContentArgument.ValueMappings>
+                </umabh:HtmlContentArgument>
+              </umab:SendMailX.HtmlBodyFromFile>
+            </umab:SendMailX>
+          </Sequence>
+        </ActivityAction>
+      </umab:GmailApplicationCard.Body>
+      <umab:GmailApplicationCard.ClientId>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </umab:GmailApplicationCard.ClientId>
+      <umab:GmailApplicationCard.ClientSecret>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </umab:GmailApplicationCard.ClientSecret>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </umab:GmailApplicationCard>
+  </ueab:SequenceX>
+</Activity>

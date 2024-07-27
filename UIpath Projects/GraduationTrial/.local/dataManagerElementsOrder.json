@@ -1,0 +1,38 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "GraduationTrial2.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Topup&Sequence_31",
+        "PrevLoanStatus1&Sequence_19",
+        "HighDeliqDays&Sequence_26",
+        "HighDeliqAmt&Sequence_26",
+        "Customer&Sequence_7",
+        "LoanCount&Sequence_7",
+        "AllCustomerLoanAccounts&Sequence_7",
+        "PreviousLoan&Sequence_19",
+        "HighestDeliqDays&Sequence_26"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
