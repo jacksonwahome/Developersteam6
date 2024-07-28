@@ -1,0 +1,143 @@
+<!DOCTYPE html> 
+
+  <html lang="en"> 
+
+    <head> 
+
+      <title>Registration Form</title> 
+
+      <meta charsert="uft-8"/> 
+
+      <link rel= "stylesheet" href= "styles.css"/> 
+
+      </head> 
+
+      <body> 
+
+        <h1 id= "title">Survery Form</h1> 
+
+        <p id="description">Please fill out in CAPITAL letters</p> 
+
+<form id="survey-form" action=" https://survey-form.freecodecamp.rocks" method="post"> 
+
+  <fieldset> 
+
+  <label id="name-label">Name: <input class-"yangu" name="name" id="name" type="text" required placeholder="Enter your Name:"/></label> 
+
+  <label id="email-label">Email: <input class-"yangu"  id="email" name= "email" type="email" placeholder="Enter your Email:" required/></label> 
+
+  <label id="number-label">Age: <input class-"yangu"  id="number" type="number" placeholder="Age" name="num" min="16" max="130"/></label> 
+
+  <label>What is your current role? 
+
+    <select class-"yangu"  id="dropdown" name="occupation"> 
+
+      <option value="">Select one</option> 
+
+<option value="1">Data Analyst</option> 
+
+    <option value="2">Programmer</option>   
+
+<option value="3">Data Scientist</option> 
+
+<option value="4">Chief Technology Officer</option> 
+
+<option value="5">None of the above</option> 
+
+      </select> 
+
+  </label> 
+
+    </fieldset> 
+
+  
+
+  
+
+  <fieldset> 
+
+    <label>Would you ever recommend excel to anyone?  </label> 
+
+       <label><input value="1" name="opinion" class="inline" type="radio"/> yes</label> 
+
+    <label><input value="2" name="opinion" class="inline" type="radio"/> No</label> 
+
+    <label><input value="3" name="opinion" class="inline" type="radio"/> Maybe</label> 
+
+    </fieldset> 
+
+  
+
+  
+
+  
+
+<fieldset> 
+
+       <label>What do you like most in excel?</label> 
+
+       <select class-"yangu" id="specialization"> 
+
+  <option value="">select one</option> 
+
+  <option value="1" >VBA</option> 
+
+  <option value="2">power Query</option> 
+
+  <option value="3">Advanced Formulas</option> 
+
+  <option value="4">Python In Excel</option> 
+
+  <option value="5">Power Pivot</option> 
+
+</select> 
+
+</fieldset> 
+
+  
+
+  
+
+<fieldset> 
+
+<label>Suggest an area that Microsoft Excel is lagging behind in. (select all that apply)</label> 
+
+<label><input class="inline" value="1" type="checkbox"/> Interface</label> 
+
+<label><input class="inline" value="2" type="checkbox"/> Formulas</label> 
+
+<label><input class="inline" value="3" type="checkbox"/> Updates</label> 
+
+<label><input class="inline" value="4" type="checkbox"/> User Friedliness</label> 
+
+<label><input class="inline" value="5" type="checkbox"/> Windows Ecosystem</label> 
+
+<label><input class="inline" value="6" type="checkbox"/> Power BI</label> 
+
+<label><input class="inline" value="7" type="checkbox"/> Collaboration</label> 
+
+<label><input class="inline" value="8" type="checkbox"/> Automation</label> 
+
+    </fieldset> 
+
+  
+
+    
+
+    <fieldset> 
+
+    <label>Any other recommendations?</label> 
+
+    <textarea name="comments" id="comments" rows="5"  placeholder= "I would like..."></textarea> 
+
+    </Fieldset> 
+
+  
+
+     <input id="submit" type="submit" value="Submit"/> 
+
+        </body> 
+
+  </form> 
+
+    </html> 

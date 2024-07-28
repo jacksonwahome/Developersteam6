@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VBA Documentation Page</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+    <meta name="description" content="VBA Content"/>
+    <body>
+      
+        <div class="navigation">
+          <nav id="navbar">
+          <header>VBA Documentation</header>
+          
+            <ul>
+              <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+              <li><a class="nav-link" href="#Understanding_the_VBA_environment">Understanding the VBA environment</a></li>
+              <li><a class="nav-link" href="#Basic_Syntax">Basic Syntax</a></li>
+              <li><a class="nav-link" href="#Recording_Macros">Recording Macros</a></li>
+              <li><a class="nav-link" href="#Working_with_objects">Working with objects</a></li>
+              <li><a class="nav-link" href="#Handing_Events_in_VBA">Handing Events in VBA</a></li>
+              <li><a class="nav-link" href="#Error_handling">Error handling</a></li>
+              <li><a class="nav-link" href="#Debugging">Debugging</a></li>
+              <li><a class="nav-link" href="#Working_with_external_data">Working with external data</a></li>
+              <li><a class="nav-link" href="#Custom_functions">Custom functions</a></li>
+              <li><a class="nav-link" href="#Advanced_topics">Advanced topics</a></li>
+
+              </ul>
+            </nav>
+          </div>
+       
+        <main id="main-doc">
+<section class="main-section" id="Introduction">
+  <header>Introduction</header>
+  
+  
+    <p>VBA stands for visual basic for applications.It's a programming language developed my Microsoft aimed at expanding the usability of the microsoft suite.</p>
+    <p>VBA usually has two superpowers:</p>
+    <div>
+    <ul>
+    <li><span class="bold">Automation Superhero:</span> If you find yourself doing the same things over and over in an Office program, VBA can take over! It's all about saving time and effort.</li>
+    <li><span class="bold">Customization Wizard:</span>  VBA lets you build tools and features that make Office applications do exactly what you need them to do, even if that functionality wasn't included originally.</li>
+
+    </ul>
+    </div>
+</section>
+
+  <section class="main-section" id="Understanding_the_VBA_environment">
+    <header>Understanding the VBA environment</header>
+     
+     <div>
+     <p>The VBA environment is where you create and run your VBA code. Here's what you'll find there:</p>
+     <ul>
+       <li><span class="bold">The VBA Editor (VBE):</span> This is your home base.  To get there, usually you'll press Alt + F11 in your Office application. The VBE includes:</li>
+       <ul>
+         <li>Code Window: The text area where you write and edit VBA code.</li>
+         <li>Project Explorer: A list of all the open Excel workbooks, Word documents, etc., and the VBA code files (modules) associated with each.</li>
+         <li>Properties Window: Lets you view and change settings for the elements you select in the Project Explorer.</li>
+         </ul>
+       <li><span class="bold">The Object Model:</span> Each Office application has a hierarchical object model. Think of this as a map of all the pieces of the application – worksheets, cells, charts, documents, paragraphs – and how they relate to each other. VBA lets you control these objects with your code.</li>
+       <li><span class="bold">Debugging Tools:</span> The VBE has a built-in debugger. This helps you:</li>
+       <ul>
+         <li>Step through code line by line</li>
+         <li>View and change the values of variables while your code runs</li>
+         <li>Find where errors are occurring</li>
+         </ul>
+       </ul>
+       <p>When writing VBA, you'll be mainly working with:</p>
+       <ul>
+         <li>Modules: Code modules are like containers where you keep bits of VBA code (called procedures).</li>
+                 <ul>
+           <li>Subroutines perform actions.</li>
+           <li>Functions perform calculations and return a value.</li>
+           </ul>
+         <li>Variables: Like little boxes to store data during your program.</li>
+         <li>Objects, Properties, and Methods: You'll use the object model to interact with Office applications.</li>
+         <ul>
+           <li>Objects: Elements like Worksheet, Range, Chart</li>
+           <li>Properties: Describe an object (cell.Value, Chart.Title)</li>
+           <li>Methods: Actions an object can do (Range.Select, Chart.Refresh)</li>
+           </ul>
+         </ul>
+         </div>
+  </section>
+
+  <section class="main-section" id="Basic_Syntax">
+    <header>Basic Syntax</header>
+    <div>
+    <p>Basic syntax is the set of rules that govern how you write valid VBA code. Here are the things to remember:</p>
+    <ul>
+      <li>Keywords: Reserved words with special meanings in VBA (e.g., Sub, End Sub, Dim, If, Then, Else, For, Next).</li>
+      <li>Variables: Named storage locations for data (e.g., Dim customerName As String).</li>
+      <li>Operators: Symbols for performing calculations or comparisons (e.g., +, -, =, <, >).</li>
+      <li>Comments: Explanatory notes ignored by VBA; start with a single quote '.</li>
+      <li>Procedures: Blocks of code performing specific tasks (Sub and Function).</li>
+      <li>Case-Insensitive: VBA doesn't care about capitalization (dim is the same as DIM) but stick to conventions for better readability.</li>
+      <li>Line Breaks: In most cases, you can break up a statement into multiple lines to improve readability.</li>
+      <li>Statements: Instructions for VBA to follow. Many end with a colon (:) to include multiple statements on one line.</li>
+      </ul>
+      </div>
+  </section>
+
+  <section class="main-section" id="Recording_Macros">
+    <header>Recording Macros</header>
+    <div>
+    
+    <p>The macro recorder lets you record your actions within an Office application (usually Excel) and then translates those actions into VBA code.
+While you work, it's writing a script for you. This is a great way to get a start on learning VBA.</p>
+<p>How to Record a Macro:</p>
+<ol>
+  <li>Developer Tab: Make sure the "Developer" tab is visible in the Ribbon of your Office application (Excel, Word, etc.). If not, go to File -> Options -> Customize Ribbon and check the "Developer" option.</li>
+  <li>Record Macro: In the Developer tab, you'll usually find a "Record Macro" button in a "Code" section.</li>
+<li>Name and Options: Give your macro a name (no spaces), optionally assign it a shortcut key, and choose where to store it.</li>
+  <li>Perform Your Actions: Now, every click, formula you type, or formatting change you make is captured by the recorder.</li>
+  <li>Stop Recording: Click the "Stop Recording" button (often in the same place as "Record Macro") when you're finished.</li>
+  
+ </ol>
+ <p>When is macro recording useful?</p>
+ <ul>
+   <li>umpstart Learning VBA: Record a simple task and examine the generated code. This helps to understand the connection between your actions and the underlying VBA syntax.</li>
+   <li>Repetitive Tasks: If you find yourself doing the same things over and over, recording a macro can save you a ton of time.</li>
+   <li>Quick Solutions: When you need a quick automation fix and don't have time to write VBA from scratch, the recorder is your helpful friend.</li>
+   </ul>
+   <p>Important things to remember:</p>
+   <ul>
+     <li>Relative vs. Absolute References: You can choose whether to use relative references (default) or absolute references when recording (check the options). This determines if the macro works on the exact cells you recorded on or can be more flexible.</li>
+     <li>Recorded Code is Often Messy: The macro recorder creates a lot of "raw" code. You'll often need to clean it up or refine it for better efficiency.</li>
+     <li>Not Always the Best Solution: For complex tasks, it's usually better to write VBA code directly, as it gives you more control and flexibility.</li>
+     </ul>
+     </div>
+  </section>
+
+  <section class="main-section" id="Working_with_objects">
+    <header>Working with objects</header>
+   
+    <div>
+    <p>The Essence of Objects:</p>
+    <p>Objects are the core building blocks of VBA automation. They represent the various components you interact with in Office programs. In Excel, you have objects like Workbooks, Worksheets, Ranges (cells), and Charts. Word has Documents, Paragraphs, and Tables. Each of these objects has its own set of properties and methods.</p>
+    <p>Properies describe an object's features. For instance, a Range object has a Value property (representing its content), and a Worksheet has a Name property.  Methods, on the other hand, are actions an object can perform. You can use the Copy method on a Range object or the SaveAs method on a Document.</p>
+    <p>How to work with objects in VBA</p>
+    <ul>
+      <li>Referencing Objects: Use object variables and the dot (.) operator to access them. For example, Dim myWorksheet As Worksheet creates a variable, and myWorksheet.Name = "Report" changes its name.  You'll also work with Collections, which are groups of related objects like the Workbooks collection.</li>
+      <li>Using the Object Model: Understand the hierarchy of objects within your application (e.g., a Workbook contains Worksheets, which contain Ranges). This helps you navigate and control parts of your Office documents.</li>
+      <li>IntelliSense to your Rescue: When typing a . after an object in the VBE, IntelliSense guides you with a list of available properties and methods.</li>
+      </ul>
+      </div>
+  </section>
+
+  <section class="main-section" id="Handing_Events_in_VBA">
+    <header>Handing Events in VBA</header>
+       <div>
+    <p>What are Events?</p>
+    <p>Events are actions that happen within your Office applications. These could be user-driven (clicking a cell, opening a workbook) or triggered by the program itself (saving a file, a worksheet calculation being completed).
+VBA lets you write code that "listens" for specific events and automatically runs when those events occur.</p>
+<p>Types of Events</p>
+<ul>
+  <li>Worksheet Events:</li>
+  <ul>
+    <li>Worksheet_Change: When a cell's value is changed.</li>
+    <li>Worksheet_SelectionChange: When the user selects a different cell.</li>
+    <li>Worksheet_BeforeDoubleClick: Right before a double-click.</li>
+    </ul>
+    
+  <li>Workbook Events:</li>
+    <ul>
+    <li>Workbook_Open: When the workbook is opened.</li>
+    <li>Workbook_BeforeClose: Before the workbook closes.</li>
+    <li>Workbook_BeforeSave: Before the workbook is saved.</li>
+    </ul>
+  <li>Application Events:Events at the application level (Excel, Word, etc.) </li>
+     </ul>
+     </div>
+  </section>
+
+   <section class="main-section" id="Error_handling">
+     <header>Error handling</header>
+       <div>   
+     <P>Proper error handling helps your code run smoothly and prevents unexpected crashes.</p>
+     <p>Why Error Handling Matters</p>
+     <ul>
+       <li>Unexpected Situations: Runtime errors can pop up for many reasons – a user enters invalid input, a file is missing, or an internet connection drops.</li>
+       <li>Bulletproof Code: Error handling lets you anticipate these issues and give your code instructions on how to gracefully handle them, rather than crashing abruptly.</li>
+       <li>User Experience: You can provide helpful error messages to guide the user instead of leaving them confused.</li>
+       </ul>
+       <p>VBA Error Handling Tools</p>
+       <ol>
+         <li>On Error Statement: The core of VBA error handling.</li>
+         <ul>
+           <li>On Error GoTo <line label>: Tells VBA that if an error occurs, jump to a specific labeled line in your code where your error-handling routine is.</li>
+           <li>On Error Resume Next: Tells VBA to ignore the error and continue to the next line of code. Use this sparingly and only when you're sure it won't cause problems later.</li>
+           <li>On Error GoTo 0: Resets error handling to its default (displaying an error message and stopping code).</li>
+           </ul>
+         <li>Error-handling Routine</li>
+         <ul>
+           <li>A section of your code labeled (e.g., ErrorHere:) where you handle the error:</li>
+           <ul>
+           <li>Display informative messages to the user.</li>
+           <li>Log the error to a file for debugging.</li>
+           <li>Attempt to fix the problem.</li>
+           <li>Clean up resources (close files, etc.).</li>
+           </ul>
+            </ul>
+         <li>Err Object</li>
+         <ul>
+           <li>Stores information about the error that occurred. It has properties like</li>
+           <ul>
+           <li>Number: Error number.</li>
+           <li>Description: Text description of the error.</li>
+           </ul>
+              </ul>
+       </0l>
+	   <Code>
+       <div class="example">
+         <p>Example:</p>
+         <p>Sub ShortExample()<br>
+    On Error GoTo HandleError <br>
+
+    Dim num1 As Double, num2 As Double<br>
+    Dim result As Double<br>
+
+    num1 = 10<br>
+    num2 = 0 <em>' Forcing a "Divide by Zero" error<br></em>
+
+    result = num1 / num2 <br>
+
+    Exit Sub <em>' Normal exit if no errors<br></em>
+
+HandleError:<br>
+    MsgBox "Error: Cannot divide by zero." <br>
+End Sub
+
+           </p>
+         </div>
+		 </code>
+         </div>
+  </section>
+
+   <section class="main-section" id="Debugging">
+     <header>Debugging</header>
+         <div>
+     <p>VBA Debugging Tools in Your Arsenal</p>
+     <ul>
+       <li>The Debug Toolbar (View -> Toolbars -> Debug): This is your command center! It includes:</li>
+       <ul>
+         <li>Step Into (F8): Executes your code one line at a time, stepping into procedures</li>
+         <li>Step Over (Shift + F8): Executes one line of code, but doesn't step into procedures (treats them as a single step).</li>
+         <li>Step Out (Ctrl + Shift + F8): Runs the rest of the current procedure and takes you back to the line that called it.</li>
+         <li>Run To Cursor (Ctrl + F8): Executes the code up until the line where your cursor is located.</li>
+         <li>Breakpoints (F9): Red dots in your code that tell VBA to pause execution when it reaches that line.</li>
+         </ul>
+       <li>Immediate Window (Ctrl + G):</li>
+       <ul>
+         <li>Print values: Use ? VariableName to print a variable's current value.</li>
+         <li>Execute code: You can directly type in VBA commands here to test things quickly.</li>
+         </ul>
+       <li>Locals Window (View -> Locals Window):</li>
+       <ul>
+         <li>Inspect variables: Shows you the current values of all variables in your current procedure.
+</li>
+         </ul>
+       <li>Watch Window (View -> Watch Window):</li>
+       <ul>
+         <li>Add Watch: Click the "+" button and add an expression you want to monitor. Its value will update as your code executes.</li>
+         
+         </ul>
+       </ul>
+       <p>Debugging strategies:</p>
+       <ol>
+         <li>Isolate the Problem: Try to narrow down where in your code the error is occurring. Use comments or temporary MsgBox statements to help pinpoint the location.</li>
+         <li>Step Through Your Code: Use the "Step Into" (F8) button to execute the code line by line, observing how variables and logic change.</li>
+         <li>Check Your Values: Use the Immediate Window and Locals Window to inspect the values of variables at different points. Are they what you expect?</li>
+         <li>Use Breakpoints: Strategically place breakpoints to pause execution and then step through the code or inspect variables.</li>
+         <li>Think Logically: Break down your code into smaller units and check if the logic of each step makes sense.</li>
+         </ol>
+         <p>Tips:</p>
+         <ul>
+           <li>Test Early, Test Often: Don't let errors snowball; try running your code frequently.</li>
+           <li>Comment as You Go: Clear comments help you understand your own code better when debugging later.</li>
+           <li>Rubber Duck Debugging: Talking through the problem (even to an inanimate object) can surprisingly help you clarify the issue.</li>
+           </ul>
+           </div>
+  </section>
+
+   <section class="main-section" id="Working_with_external_data">
+     <header>Working with external data</header>
+      <div>    
+     <p>Common Scenarios:</p>
+     <ul>
+       <li>Importing Data:  Pull data from sources like:</li>
+       <ul>
+         <li>Text files (CSV, TXT)</li>
+         <li>Other Excel workbooks</li>
+         <li>Databases (Access, SQL Server, etc.)</li>
+         <li>Web sources via APIs</li>
+         </ul>
+       <li>Exporting Data:  Save Excel data to external files (text, XML, etc.) or send it to databases.</li>
+       </ul>
+       <p>VBA Tools for External Data</p>
+       <ol>
+         <li>ADO (ActiveX Data Objects):</li>
+         <ul>
+           <li>Powerful library for working with databases.</li>
+           <li>Lets you connect to databases, execute SQL queries, and work with recordsets (sets of data returned from a database).</li>
+           </ul>
+         <li>Workbooks.Open Method:</li>
+         <ul>
+           <li>Used to open other Excel workbooks and copy data from them.</li>
+           <li>Can also open text-based files, like CSV.</li>
+           </ul>
+         <li>XML DOM (Document Object Model):</li>
+         <ul>
+           <li>Lets you read, manipulate, and create XML files.</li>
+           </ul>
+         <li>Web Requests:</li>
+         <ul>
+           <li>Libraries like WinHTTP or MSXML can be used to make requests to web APIs and work with the returned data (often in JSON or XML format).</li>
+           </ul>
+         </ol>
+         <p>Example: Importing from a CSV File</p>
+		 <code>
+         <div class="example">
+           <p>VBA<br>
+           <br>
+             Sub ImportFromCSV()<br>
+    Dim filePath As String, conn As ADODB.Connection, rs As ADODB.Recordset<br>
+
+    filePath = "C:\Data\datafile.csv" <br>
+
+    <em>' Set up ADO connection</em><br>
+    Set conn = New ADODB.Connection<br>
+    conn.Open "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" & filePath & _<br>
+        ";Extended Properties=""Text;HDR=YES;FMT=Delimited"";"<br>
+
+    <em>' Execute query</em><br>
+    Set rs = conn.Execute("SELECT * FROM [datafile.csv]")<br> 
+
+    <em>' Copy data to Excel Worksheet</em><br>
+    ActiveSheet.Cells(1, 1).CopyFromRecordset rs <br>
+
+    rs.Close <br>
+    conn.Close <br>
+End Sub
+
+             </p>
+           </div>
+		   </code>
+           </div>
+  </section>
+
+   <section class="main-section" id="Custom_functions">
+     <header>Custom functions</header>
+    <div>      
+     <p>What are Custom Functions (UDFs)?</p>
+     <ul>
+       <li>Your Own Formulas: Custom functions, also called User-Defined Functions (UDFs), are pieces of VBA code that work just like regular Excel functions (e.g., SUM, AVERAGE).</li>
+       <li>Reusable: You write them once and then use them in your worksheets as many times as you need.</li>
+       <li>Solve Unique Problems: Create functions that perform calculations or manipulations that are tailored specifically to your needs.</li>
+       </ul>
+<p>How to Create Custom Functions<p>
+<ol>
+  <li>VBA Editor: Open the Visual Basic Editor (usually Alt + F11).</li>
+  <li>Insert Module:  Insert a new module (Insert -> Module) to house your functions.
+
+</li>
+  <li>Function Keyword:  Start your code with:</li>
+  </ol>
+  <code>
+    <div class="example">
+      <p>VBA<br>
+      <br>
+        Public Function FunctionName(Argument1 As DataType, Argument2 As DataType, ...) As DataType<br>
+    ' Your calculation code here<br>
+    FunctionName = Result ' Set the return value<br>
+End Function
+
+        </p>
+      </div>
+	  </code>
+      <p>Example: Calculate Net Price</p>
+	  <code>
+      <div class="example">
+        <p> VBA <br><br>
+        Public Function CalculateNetPrice(Price As Double, TaxRate As Double) As Double<br>
+    CalculateNetPrice = Price * (1 + TaxRate)<br>
+End Function
+
+          </p>
+        </div>
+		</code>
+        <p>Using Your Custom Function</p>
+        <ul>
+          <li>In a worksheet: Just like regular functions! Type =CalculateNetPrice(A2, 0.07) and you'll get the result.</li>
+          </ul>
+          <p>Key Points</p>
+          <ul>
+            <li>Public: Make sure your functions are declared as Public to use them in the worksheet.</li>
+            <li>Arguments: Your custom function can take inputs just like built-in functions do.</li>
+            <li>Data Types: Specify data types for arguments and the function's return value.</li>
+            <li>Cannot Change Worksheet: Custom functions are primarily for calculation; they can't directly change cell formats, insert rows, or perform actions beyond returning a value.</li>
+            </ul>
+            <p>When Custom Functions Shine</p>
+            <ul>
+              <li>Complex Calculations: Create functions for calculations that are cumbersome or involve many steps in a formula.</li>
+              <li>Reusability: Save time and prevent errors by writing functions for tasks you do frequently.</li>
+              <li>Specific Workflows: Tailor calculations exactly to your company's or project's specific requirements.</li>
+              </ul>
+              <p>Things to Consider</p>
+              <ul>
+                <li>Performance: Excessively complex custom functions can potentially slow down calculations on large workbooks.</li>
+                <li>Alternatives: Sometimes, complex formulas or PivotTables might do the trick without needing VBA.</li>
+               
+                </ul>
+                </div>
+  </section>
+
+  <section class="main-section" id="Advanced_topics">
+    <header>Advanced topics</header>
+    <div>
+    <p>Areas to Explore</p>
+    <ul>
+      <li>Object-Oriented Programming (OOP):</li>
+      <ul>
+        <li>Create your own classes to represent custom objects</li>
+        <li>Encapsulation, inheritance, and polymorphism concepts will give you power and better organization in large projects.</li>
+        </ul>
+      <li>Working with External Applications:</li>
+      <ul>
+        <li>Control other Office programs (Word, PowerPoint, Outlook) from Excel using VBA.</li>
+        <li>Automate tasks across multiple applications.</li>
+        </ul>
+      <li>User Interface Design:</li>
+      <ul>
+        <li>Build custom UserForms (dialogs) for better interaction and input options.</li>
+        <li>Use controls like text boxes, buttons, and list boxes.</li>
+        </ul>
+      <li>Working with the Windows API:</li>
+      <ul>
+        <li>Tap into low-level Windows operating system functions.</li>
+        <li>Highly advanced, but allows you to automate things beyond the scope of Office programs.</li>
+        </ul>
+      <li>Arrays for Speed:</li>
+      <ul>
+        <li>Understand how to work with arrays in memory for faster processing of large dataset</li>
+        <li>Improve efficiency, especially when performing loops.</li>
+        </ul>
+      </ul>
+      <p>Here are some of the specific examples of advanced topics in VBA</p>
+      <ul>
+        <li>OOP: Inventory Management</li>
+        <ul>
+          <li>Create a "Product" class with properties (name, price, quantity).</li>
+          <li>Write methods to add stock, calculate order totals, etc.</li>
+          </ul>
+        <li>UserForms: Data Entry</li>
+        <ul>
+          <li>Design a UserForm for streamlined data input into a worksheet.</li>
+          <li>Include validation to ensure users enter correct data types.</li>
+          </ul>
+        <li>External Applications: Word Report</li>
+        <ul>
+          <li>Generate a report in Word with data and charts populated from Excel.</li>
+          </ul>
+        </ul>
+        </div>
+		<code>
+		</code>
+ </section>
+ 
+          </main>
+      </body>
+  </html>
